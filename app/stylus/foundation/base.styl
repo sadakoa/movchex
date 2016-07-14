@@ -1,0 +1,51 @@
+// Google Web Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+// Color variable
+yellow = #FFCA28
+blue   = #1F86EB
+green  = #009688
+red    = #E91E63
+gray   = #DADDE0
+black  = #333333
+white  = #ffffff
+
+// Media Query
+pc()
+  @media all and (min-width: 769px)
+    {block}
+sp()
+  @media all and (max-width: 768px)
+    {block}
+
+// Font variable
+baseFontFamily = 'Lato', YuGothic, '游ゴシック', 'ヒラギノ角ゴ Pro W3' , 'Hiragino Kaku Gothic Pro' , 'Meiryo UI' , 'メイリオ' , Meiryo , 'ＭＳ Ｐゴシック' , 'MS PGothic' , sans-serif
+baseFontSize   = 16px
+baseFontMargin = 1px
+
+body
+  font-family baseFontFamily
+  font-size baseFontSize
+  letter-spacing baseFontMargin
+  background #0F0F0F
+  color white
+  overflow hidden
+  -webkit-font-smoothing antialiased
+  -webkit-overflow-scrolling: touch
+  ul
+    list-style none
+  a
+    text-decoration none
+    color white
+  img
+    max-width 100%
+    height auto
+
+.app
+  width 100%
+  height 100vh
+  background center center /cover no-repeat
+  background-image url('../images/background/app-bg.png')
+  +pc()
+    width 375px
+    margin 0 auto

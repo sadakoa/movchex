@@ -1,9 +1,67 @@
 extends layouts/_layout.jade
 
 block append init
-  - pageTitle = '';
-  - bodyClass = '';
+  - pageTitle = 'MOVCHEX';
+  - bodyClass = 'inbox';
 
 block content
-  #app
-    {{ message }}
+  .app#app
+    .l-header
+      .p-header-logo
+        img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
+      h1.p-page-title
+        | INBOX
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      
+      nav.p-header-nav#header-nav
+        img.p-header-nav__logo(src='images/logo/nav-logo.png' width='150')
+        ul.p-header-nav__list
+          li.p-header-nav__list__item
+            a.p-header-nav__list__item--anchor(href='#')
+              span.p-header-nav__list__item__sub
+                | これから観る映画
+              | INBOX
+          li.p-header-nav__list__item
+            a.p-header-nav__list__item--anchor(href='#')
+              span.p-header-nav__list__item__sub
+                | 映画を探す
+              | SEARCH
+          li.p-header-nav__list__item
+            a.p-header-nav__list__item--anchor(href='#')
+              span.p-header-nav__list__item__sub
+                | 人気の映画
+              | POPULAR
+          li.p-header-nav__list__item
+            a.p-header-nav__list__item--anchor(href='#')
+              span.p-header-nav__list__item__sub
+                | 視聴済みの映画
+              | HISTORY
+      
+        ul.p-header-nav__subList
+          li.p-header-nav__subList__item
+            a.p-header-nav__subList__item--anchor(href='#')
+              | MOVCHEXとは
+          li.p-header-nav__subList__item
+            a.p-header-nav__subList__item--anchor(href='#')
+              | 利用規約
+          li.p-header-nav__subList__item
+            a.p-header-nav__subList__item--anchor(href='#')
+              | プライバシー
+              
+    .l-main
+      .p-empty-message
+        img.p-empty-message__image(src='images/icon/popcorn.svg' alt='ポップコーン')
+        p.p-empty-message__text
+          | これから観る予定の映画を
+          br
+          | チェックしよう！
+      
+      img.p-add-button#add-button(src='images/button/add-button.png' alt="追加" width='50')
+      
+        
+          
+          
+      
+      

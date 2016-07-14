@@ -1,4 +1,4 @@
-include ../_config
+include _config
 
 block init
   - var pageTitle = '';
@@ -8,9 +8,12 @@ doctype
 html(lang="ja")
   head
     meta(charset="utf-8")
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
+    meta(meta name="apple-mobile-web-app-capable" content="yes")
     meta(name='description', content='#{description}')
     meta(name='Keywords', content='#{keywords}')
+    link(rel='shortcut icon' href='images/favicon.ico')
+    link(rel='apple-touch-icon' href='images/icon/home-icon.png')
     link(rel='stylesheet', href='stylesheet/app.css')
 
     title #{title}
