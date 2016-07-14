@@ -18,7 +18,8 @@
   transform translateX(0%)
   will-change transform
   .p-header-nav__list__item
-    transform translateX(0)
+    will-change transform
+    transform translateX(0%)
     opacity 1
     &:nth-of-type(1)
       transition-delay 0.15s
@@ -41,6 +42,8 @@
   padding 30px 10px 0 10px
   &__item
     transition all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+    pointer-events none
+    will-change none
     opacity 0
     font-size 20px
     letter-spacing 3px
