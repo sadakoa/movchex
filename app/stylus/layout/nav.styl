@@ -13,10 +13,22 @@
   transition all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
   background url('../images/background/nav-bg.png') center /cover no-repeat
 
-// サイドナビが開いた時のスタイル
+// サイドナビが開いた時のスタイル & アニメーション
 .p-header-nav.open
   transform translateX(0%)
-  will-chanage transform
+  will-change transform
+  .p-header-nav__list__item
+    transform translateX(0)
+    opacity 1
+    &:nth-of-type(1)
+      transition-delay 0.15s
+    &:nth-of-type(2)
+      transition-delay 0.2s
+    &:nth-of-type(3)
+      transition-delay 0.25s
+    &:nth-of-type(4)
+      transition-delay 0.3s
+
 
 // ナビのロゴ
 .p-header-nav__logo
@@ -28,9 +40,12 @@
   border-top 1px solid #6FAFC2
   padding 30px 10px 0 10px
   &__item
+    transition all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
+    opacity 0
     font-size 20px
     letter-spacing 3px
     margin 0 0 25px 0
+    transform translateX(25%)
     &__sub
       letter-spacing 0.7px
       font-size 10px
