@@ -1,0 +1,21 @@
+include ../_config
+
+block init
+  - var pageTitle = '';
+  - var bodyClass = '';
+
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+    meta(name='description', content='#{description}')
+    meta(name='Keywords', content='#{keywords}')
+    link(rel='stylesheet', href='stylesheet/app.css')
+
+    title #{title}
+
+  body(class = bodyClass)
+    block content
+
+  script(src="js/app.js")
