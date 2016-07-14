@@ -1,0 +1,35 @@
+// 画像リスト
+.p-inbox-list
+  &__item
+    height 130px
+    position relative
+    &:before
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      width 100%
+      height 70px
+      background-image linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 120%)
+    .p-check-button
+      position absolute
+      top 10px
+      left 10px
+
+.p-inbox-movie
+  &__image
+    object-fit cover
+    width 100%
+    height 130px
+  &__info
+    position absolute
+    bottom 10px
+    right 10px
+    text-align right
+    &__title
+      letter-spacing 1.5px
+    &__sub
+      color gray
+      font-size 10px
+      &--data
+        margin: 0 0 0 5px

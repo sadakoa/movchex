@@ -51,14 +51,26 @@ block content
               | プライバシー
               
     .l-main
-      .p-empty-message
-        img.p-empty-message__image(src='images/icon/popcorn.svg' alt='ポップコーン')
-        p.p-empty-message__text
-          | これから観る予定の映画を
-          br
-          | チェックしよう！
+      //- .p-empty-message
+      //-   img.p-empty-message__image(src='images/icon/popcorn.svg' alt='ポップコーン')
+      //-   p.p-empty-message__text
+      //-     | これから観る予定の映画を
+      //-     br
+      //-     | チェックしよう！
+      ul.p-inbox-list
+        li.p-inbox-list__item.p-inbox-movie
+          img.p-check-button#checkButton(src='images/button/check-button.png' alt='チェック' width='40')
+          img.p-inbox-movie__image#movieImage(src='images/sample01.png' alt='作品')
+          .p-inbox-movie__info
+            h2.p-inbox-movie__info__title#movieTitle
+              | ファイティング・ニモ
+            p.p-inbox-movie__info__sub
+              | Added to :
+              span.p-inbox-movie__info__sub--data#addedData
+                | 2016.07.12
+              
       
-      img.p-add-button#add-button(src='images/button/add-button.png' alt="追加" width='50')
+      img.p-add-button#add-button(src='images/button/add-button.png' alt='追加' width='50')
       
         
           
