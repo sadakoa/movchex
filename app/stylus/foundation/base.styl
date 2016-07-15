@@ -40,7 +40,15 @@ body
 .app
   width 100%
   height 100vh
-  background #0F0F0F center center /cover no-repeat
-  background-image url('../images/background/app-bg.png')
+  &:before
+    content ''
+    position fixed
+    top 0
+    left 0
+    background red
+    width 100vw
+    height 100vh
+    background #0F0F0F center center /cover no-repeat
+    background-image url('../images/background/app-bg.png')
   +pc()
     background-image none
