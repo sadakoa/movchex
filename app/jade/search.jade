@@ -21,6 +21,26 @@ block content
         input.p-search-form__input#search-input(type='text' placeholder='映画タイトルのキーワードで検索')
         button.c-button.p-search-form__button#search-button(type='submit' name='action' value='send')
           | 検索
+      
+      .p-search-result
+        h2.p-search-result__title
+          span.p-search-result__title__keyword
+            | 「ズートピア」
+          | の検索結果
+        ul.p-result-list
+          li.p-result-list__item
+            a(href='#').p-result-list__item--anchor
+              img.p-result-list__item__image#movie-image(src='images/sample02.png')
+              h3.p-result-list__item__title#movie-title
+                | Zootopia
+              p.p-result-list__item__info
+                span.p-result-list__item__info__data#movie-release
+                  | 2016
+                span.p-result-list__item__info__data#movie-genre
+                  | Animation, Adventure
+                
+            
+        
 
       
       
