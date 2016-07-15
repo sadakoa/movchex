@@ -29,8 +29,8 @@ block content
           | の検索結果
         ul.p-result-list.c-two-grid
           li.p-result-list__item.is-added
-            a(href='#').p-result-list__item--anchor
-              img.p-result-list__item__image#movie-image(v-on:click='work' src='images/sample02.png')
+            a(v-on:click='work').p-result-list__item--anchor
+              img.p-result-list__item__image#movie-image(src='images/sample02.png')
               h3.p-result-list__item__title#movie-title
                 | Zootopia
               p.p-result-list__item__info
@@ -39,7 +39,7 @@ block content
                 span.p-result-list__item__info__data#movie-genre
                   | Animation, History
           li.p-result-list__item.is-watched
-            a(href='#').p-result-list__item--anchor
+            a(v-on:click='work').p-result-list__item--anchor
               img.p-result-list__item__image#movie-image(src='images/sample02.png')
               h3.p-result-list__item__title#movie-title
                 | ミッションインポッシブル
@@ -50,7 +50,7 @@ block content
                 span.p-result-list__item__info__data#movie-genre
                   | Animation, Adventure
           li.p-result-list__item
-            a(href='#').p-result-list__item--anchor
+            a(v-on:click='work').p-result-list__item--anchor
               img.p-result-list__item__image#movie-image(src='images/sample02.png')
               h3.p-result-list__item__title#movie-title
                 | Zootopia
