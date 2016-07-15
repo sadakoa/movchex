@@ -18,5 +18,8 @@ let routes = new Vue({
     search: () => {
       window.location.href = 'search.html';
     },
+    work: () => {
+      window.location.href = 'work.html';
+    },
   },
 });

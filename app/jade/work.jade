@@ -1,0 +1,19 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = '作品詳細 | MOVCHEX';
+  - bodyClass = 'work';
+
+block content
+  .app#app
+    .l-header.common-header#header
+      a(v-on:click='inbox').p-header-logo
+        img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
+      h1.p-page-title
+        | FILM WORK
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#main
