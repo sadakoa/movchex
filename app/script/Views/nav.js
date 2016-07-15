@@ -21,7 +21,7 @@ export default function openNav() {
   navButton.toggleClass('open');
   nav.toggleClass('open');
   // ナビゲーション展開時はスクロールを禁止する
-  $(window).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-  });
+  // $(window).on('touchmove.noScroll', function(e) {
+    // e.preventDefault();
+  // });
 }
