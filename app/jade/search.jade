@@ -1,0 +1,22 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = '映画を探す | MOVCHEX';
+  - bodyClass = 'search';
+
+block content
+  .app#app
+    .l-header#header
+      a(v-on:click='inbox').p-header-logo
+        img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
+      h1.p-page-title
+        | INBOX
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#main
+
+      
+      

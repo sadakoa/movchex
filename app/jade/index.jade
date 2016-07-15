@@ -7,14 +7,13 @@ block append init
 block content
   .app#app
     .l-header#header
-      a(href="#").p-header-logo
+      a(v-on:click='inbox').p-header-logo
         img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
       h1.p-page-title
         | INBOX
       a.c-nav-button#nav-button
         span.c-nav-button__line
         span.c-nav-button__line
-      
       include layouts/_nav.jade
               
     .l-main#main
@@ -36,7 +35,7 @@ block content
               span.p-inbox-movie__info__sub--data#addedData
                 | 2016.07.12
       
-      img.p-add-button#add-button(src='images/button/add-button.png' alt='追加' width='50')
+      img.p-add-button#add-button(v-on:click='search' src='images/button/add-button.png' alt='追加' width='50')
       
         
           
