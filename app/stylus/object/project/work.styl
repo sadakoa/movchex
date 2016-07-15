@@ -26,7 +26,7 @@
 
 // 詳細
 .p-movie-info
-  height 130px
+  height 125px
   position relative
   &__image
     position absolute
@@ -69,10 +69,28 @@
 .p-movie-overview
   margin 0 20px 20px 20px
   padding 0 0 20px 0
-  border-bottom 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom 1px solid rgba(255, 255, 255, 0.6)
   &__text
     font-size 12px
 
+// 関連する作品
+.p-movie-relation
+  margin 0 20px 20px 20px
+  padding 0 0 20px 0
+  border-bottom 1px solid rgba(255, 255, 255, 0.6)
+
+.p-movie-relation__list
+  &__item
+    &__image
+      object-fit cover
+      width 100%
+      border-radius 2px
+      box-shadow 0 0 10px rgba(0, 0, 0, 0.6)
+
+
 .p-movie-headline
   font-weight 700
-  margin 0 0 2px 0
+  margin 0 0 4px 0
+
+.p-movie-relation .p-movie-headline
+  margin 0 0 10px 0
