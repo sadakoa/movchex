@@ -5,6 +5,15 @@
   border-bottom 1px solid #646464
   position fixed
   z-index 2
+  &:before
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 60px
+    z-index -1
+    background-image linear-gradient(-180deg, #000000 0%, rgba(0,0,0,0) 130%)
   .p-header-logo
     position absolute
     top 9px
