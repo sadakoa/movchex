@@ -6,7 +6,7 @@ block append init
 
 block content
   .app#app
-    .l-header#header
+    .l-header.common-header#header
       a(v-on:click='inbox').p-header-logo
         img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
       h1.p-page-title
@@ -19,7 +19,7 @@ block content
     .l-main#main
       form.p-search-form#search-form(name='search-form' method='GET')
         input.p-search-form__input#search-input(type='text' placeholder='映画タイトルのキーワードで検索')
-        button.p-search-form__button#search-button(type='submit' name='action' value='send')
+        button.c-button.p-search-form__button#search-button(type='submit' name='action' value='send')
           | 検索
 
       
