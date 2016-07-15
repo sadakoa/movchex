@@ -6,14 +6,54 @@ block append init
 
 block content
   .app#app
-    header.l-header.common-header#header
+    header.l-header.l-work-header#header
       a(v-on:click='inbox').p-header-logo
-        img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
+        img.p-header-logo__image(src='images/logo/head-logo_white.png' alt='MOVCHEX' width='40')
       h1.p-page-title
-        | DETAIL
+        | Zootpia
       a.c-nav-button#nav-button
         span.c-nav-button__line
         span.c-nav-button__line
       include layouts/_nav.jade
               
-    .l-main#main
+    .l-main.l-work-main#main
+      .p-movie-detail
+        .p-movie-backdrop
+          img.p-movie-backdrop__image#movie-backdrop(src='images/sample03.png' alt='背景画像')
+          img.p-movie-backdrop__play#movie-play-button(src='images/button/play-button.png' alt='再生' width='50')
+        .p-movie-info
+          img.p-movie-info__image#movie-image(src='images/sample02.png' alt='映画のジャケット')
+          h2.p-movie-info__title#movie-title
+            | Zootpia
+            span.p-movie-info__data
+              | (2016)
+          p.p-movie-info__genre
+            | Animation | Adventure | Family
+          p.p-movie-info__rate
+            | 7.1
+        .p-movie-overview
+          h3.p-movie-headline
+            | 内容
+          p.p-movie-overview__text
+            | Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery.
+        .p-movie-relation
+          h3.p-movie-headline
+            | 関連作品
+          ul.p-movie-relation__list
+            li.p-movie-relation__list__item
+              a(href='#').p-movie-relation__list__item--anchor
+                img.p-movie-relation__list__item#relation-movie-image(src='images/sample04.png' alt='映画のジャケット')
+            li.p-movie-relation__list__item
+              a(href='#').p-movie-relation__list__item--anchor
+                img.p-movie-relation__list__item#relation-movie-image(src='images/sample04.png' alt='映画のジャケット')
+            li.p-movie-relation__list__item
+              a(href='#').p-movie-relation__list__item--anchor
+                img.p-movie-relation__list__item#relation-movie-image(src='images/sample04.png' alt='映画のジャケット')
+      .p-push
+        button.c-button.p-push__button#push-button
+          | INBOXに追加する
+          
+      include layouts/_footer.jade
+        
+          
+      
