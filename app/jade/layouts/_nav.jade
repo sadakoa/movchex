@@ -1,13 +1,13 @@
 nav.p-header-nav#header-nav
-  img.p-header-nav__logo(src='images/logo/nav-logo.png' width='150')
+  img.p-header-nav__logo(v-on:click='inbox' src='images/logo/nav-logo.png' width='150')
   ul.p-header-nav__list
     li.p-header-nav__list__item
-      a.p-header-nav__list__item--anchor(href='#')
+      a.p-header-nav__list__item--anchor(v-on:click='inbox')
         span.p-header-nav__list__item__sub
           | これから観る映画
         | INBOX
     li.p-header-nav__list__item
-      a.p-header-nav__list__item--anchor(href='#')
+      a.p-header-nav__list__item--anchor(v-on:click='search')
         span.p-header-nav__list__item__sub
           | 映画を探す
         | SEARCH
