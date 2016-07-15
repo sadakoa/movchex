@@ -23,14 +23,15 @@ block content
           img.p-movie-backdrop__play#movie-play-button(src='images/button/play-button.png' alt='再生' width='50')
         .p-movie-info
           img.p-movie-info__image#movie-image(src='images/sample02.png' alt='映画のジャケット')
-          h2.p-movie-info__title#movie-title
-            | Zootpia
-            span.p-movie-info__data
-              | (2016)
-          p.p-movie-info__genre
-            | Animation | Adventure | Family
-          p.p-movie-info__rate
-            | 7.1
+          .p-movie-info__block
+            h2.p-movie-info__block__title#movie-title
+              | Zootopia
+              span.p-movie-info__block__data
+                | (2016)
+            p.p-movie-info__block__genre
+              | Animation | Adventure | Family
+            p.p-movie-info__block__rate
+              | 7.1
         .p-movie-overview
           h3.p-movie-headline
             | 内容
