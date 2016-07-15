@@ -10,13 +10,17 @@ block content
       a(v-on:click='inbox').p-header-logo
         img.p-header-logo__image(src='images/logo/head-logo_blue.png' alt='MOVCHEX' width='40')
       h1.p-page-title
-        | INBOX
+        | SEARCH
       a.c-nav-button#nav-button
         span.c-nav-button__line
         span.c-nav-button__line
       include layouts/_nav.jade
               
     .l-main#main
+      form.p-search-form#search-form(name='search-form' method='GET')
+        input.p-search-form__input#search-input(type='text' placeholder='映画タイトルのキーワードで検索')
+        button.p-search-form__button#search-button(type='submit' name='action' value='send')
+          | 検索
 
       
       

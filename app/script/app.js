@@ -9,13 +9,13 @@ window.onload = () => {
 };
 
 // ルーティング
-new Vue({
+let routes = new Vue({
   el: '#app',
   methods: {
-    inbox: function () {
+    inbox: () => {
       window.location.href = 'index.html';
     },
-    search: function () {
+    search: () => {
       window.location.href = 'search.html';
     },
   },
