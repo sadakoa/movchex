@@ -4,7 +4,8 @@
   "description": "MANAGEMENT FOR YOUR MOVIE LIFE!",
   "main": "index.js",
   "scripts": {
-    "watch": "watchify ./app/script/app.js -t babelify -o 'exorcist ./dist/js/app.js.map > ./dist/js/app.js' -d -v"
+    "watch": "watchify ./app/script/app.js -t babelify -o 'exorcist ./dist/js/app.js.map > ./dist/js/app.js' -d -v",
+    "js:build": "uglifyjs -c -o ./dist/js/app.min.js ./dist/js/app.js"
   },
   "author": "sadakoa",
   "license": "MIT",
