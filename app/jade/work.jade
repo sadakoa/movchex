@@ -7,8 +7,8 @@ block append init
 block content
   .app#app
     header.l-header.l-work-header#header
-      a(v-on:click='inbox').p-header-logo
-        img.p-header-logo__image(src='images/logo/head-logo_white.png' alt='MOVCHEX' width='40')
+      a(v-on:click='backHistory').p-header-back
+        img.p-header-back__image(src='images/icon/arrow.svg' alt='戻る')
       h1.p-page-title
         | WORK DETAIL
       a.c-nav-button#nav-button
@@ -22,7 +22,7 @@ block content
           img.p-movie-backdrop__image#movie-backdrop(src='images/sample03.png' alt='背景画像')
           img.p-movie-backdrop__play#movie-play-button(src='images/button/play-button.png' alt='再生' width='50')
         .p-movie-info
-          img.p-movie-info__image#movie-image(src='images/sample02.png' alt='映画のジャケット')
+          img.p-movie-info__image#movie-image(src='images/sample02.png' alt='映画のジャケット' data-adaptive-background)
           .p-movie-info__block
             h2.p-movie-info__block__title#movie-title
               | Zootopia

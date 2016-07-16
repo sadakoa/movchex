@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI.ver02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Material" transform="translate(-58.000000, -132.000000)" fill="#FFFFFF">
+            <g id="Group-9" transform="translate(59.000000, 133.000000)">
+                <path d="M1.09452496,17.9502094 C0.969436397,18.075298 0.813075688,18.1378423 0.641078908,18.1378423 C0.469082127,18.1378423 0.312721418,18.075298 0.187632851,17.9502094 C-0.0625442837,17.7000323 -0.0625442837,17.2934944 0.187632851,17.0433173 L8.16202902,9.06892113 L0.187632851,1.09452496 C-0.0625442837,0.844347829 -0.0625442837,0.437809986 0.187632851,0.187632851 C0.437809986,-0.0625442837 0.844347829,-0.0625442837 1.09452496,0.187632851 L9.52236719,8.61547507 C9.77254432,8.86565221 9.77254432,9.27219005 9.52236719,9.52236719 L1.09452496,17.9502094 L1.09452496,17.9502094 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.6" transform="translate(4.855000, 9.068921) scale(-1, 1) translate(-4.855000, -9.068921) "></path>
+                <rect id="Rectangle-216" x="0" y="8" width="23" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

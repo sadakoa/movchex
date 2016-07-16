@@ -21,5 +21,9 @@ let routes = new Vue({
     work: () => {
       window.location.href = 'work.html';
     },
+    backHistory: () => {
+      javascript:window.history.back(-1);
+      return false;
+    },
   },
 });
