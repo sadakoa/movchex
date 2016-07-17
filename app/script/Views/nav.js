@@ -9,6 +9,7 @@
 // グローバル変数 ================================================
 const navButton = $('#nav-button');
 const nav = $('#header-nav');
+let flag = false;
 // =============================================================
 
 /**
@@ -20,10 +21,20 @@ const nav = $('#header-nav');
 export default function openNav() {
   navButton.toggleClass('open');
   nav.toggleClass('open');
+
   // ナビゲーション展開時はスクロールを禁止する
-  // $(window).on('touchmove.noScroll', function(e) {
-    // e.preventDefault();
-  // });
+  if (!flag) {
+    // メニュー展開時はスクロールを禁止
+    $(window).on('touchmove.noScroll', function(e) {
+      e.preventDefault();
+    });
+    flag = true;
+  }
+  else {
+    メニュー閉
+    $(window).off('.noScroll');
+    flag = false;
+  }
 }
 
 // =============================================================
