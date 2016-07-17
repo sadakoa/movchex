@@ -1,10 +1,14 @@
 // ライブラリ
 import * as load from './load';
 
+// ======================================================
+
 // イベントの初期化
 window.onload = () => {
   load.setEvent();
 };
+
+// ======================================================
 
 // ルーティング
 let routes = new Vue({
@@ -26,6 +30,7 @@ let routes = new Vue({
   },
 });
 
+// ======================================================
 
 /**
  * jquery.adaptive-backgrounds.jsの実行関数
@@ -43,3 +48,5 @@ const adaptive_params = {
 };
 // 実行
 $.adaptiveBackground.run(adaptive_params);
+
+// ======================================================
