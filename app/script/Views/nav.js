@@ -19,10 +19,10 @@ let flag = false;
  * @param {undefined} nav ナビゲーションメニュー
  */
 export default function openNav() {
+  // 展開用のスタイルを付与
   navButton.toggleClass('open');
   nav.toggleClass('open');
 
-  // ナビゲーション展開時はスクロールを禁止する
   if (!flag) {
     // メニュー展開時はスクロールを禁止
     $(window).on('touchmove.noScroll', function(e) {
@@ -31,7 +31,7 @@ export default function openNav() {
     flag = true;
   }
   else {
-    メニュー閉
+    // メニューを閉じたらスクロールイベントを付与
     $(window).off('.noScroll');
     flag = false;
   }
