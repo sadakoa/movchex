@@ -22,6 +22,7 @@
 
 import initialize from './Model/initialize';
 import route from './Controller/route';
+import adaptiveBackground from './View/adaptiveBackground';
 window.onload = () => {
   initialize();
   route();
