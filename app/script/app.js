@@ -12,6 +12,7 @@
 
  * View  - 表示・出力に関係する処理を担う要素
     * navigation.js - スライドメニュ-の開閉処理を行う
+    * adaptiveBackground.js - 作品詳細のドミナントカラーに関する処理を行う
 
  * Controller - ViewとModelの処理に応じて全体を制御する要素
     * setEvent.js - イベントリスナーを初期化、格納する処理を行う
@@ -23,6 +24,7 @@
 import initialize from './Model/initialize';
 import route from './Controller/route';
 import adaptiveBackground from './View/adaptiveBackground';
+
 window.onload = () => {
   initialize();
   route();
@@ -30,21 +32,15 @@ window.onload = () => {
 
 // ======================================================
 
-/**
- * jquery.adaptive-backgrounds.jsの実行関数
- */
+// jquery.adaptive-backgrounds.jsのオプション
 const adaptive_params = {
   selector: '.p-movie-info__image',
-  // 背景色を適用する対象セレクタ
   parent: '.l-work-main',
-  // 背景色の明度に合わせてフォントカラーを変更するかどうか
   normalizeTextColor: true,
-  // 明度に合わせたフォントカラー
-  normalizedTextColors: {dark: '#000', light: '#fff'},
-  // 明度に合わせたクラス適用
-  lumaClasses: {light: 'ab-light', dark: 'ab-dark'}
+  normalizedTextColors: { dark: '#000', light: '#fff' },
+  lumaClasses: { light: 'ab-light', dark: 'ab-dark' },
 };
-// 実行
+
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================
