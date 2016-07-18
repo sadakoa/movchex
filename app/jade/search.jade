@@ -25,22 +25,19 @@ block content
       .p-search-result
         h2.p-search-result__title
           span.p-search-result__title__keyword
-            | 「ズートピア」
+            | {{ keyword }}
           | の検索結果
         ul.p-result-list.c-two-grid
           li.p-result-list__item(v-for='work in works' v-cloak)
-            a(v-on:click='work').p-result-list__item--anchor
-              | {{ work.title }}
-          //- li.p-result-list__item.is-added
-          //-   a(v-on:click='work').p-result-list__item--anchor
-          //-     img.p-result-list__item__image#movie-image(src='images/sample02.png')
-          //-     h3.p-result-list__item__title#movie-title
-          //-       | Zootopia
-          //-     p.p-result-list__item__info
-          //-       span.p-result-list__item__info__data#movie-release
-          //-       | 2016
-          //-       span.p-result-list__item__info__data#movie-genre
-          //-         | Animation, History
+            a(v-on:click='work' href='work.html').p-result-list__item--anchor
+              img.p-result-list__item__image#movie-image(src='images/sample02.png')
+              h3.p-result-list__item__title#movie-title
+                | {{ work.title }}
+              p.p-result-list__item__info
+                span.p-result-list__item__info__data#movie-release
+                | {{ work.release_date }}
+                span.p-result-list__item__info__data#movie-genre
+                  | ジャンル
 
       include layouts/_footer.jade
 
