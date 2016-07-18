@@ -21,32 +21,11 @@
 // ======================================================
 
 import initialize from './Model/initialize';
-
+import route from './Controller/route';
 window.onload = () => {
   initialize();
+  route();
 };
-
-// ======================================================
-
-// ルーティング
-let routes = new Vue({
-  el: '#app',
-  methods: {
-    inbox: () => {
-      window.location.href = 'index.html';
-    },
-    search: () => {
-      window.location.href = 'search.html';
-    },
-    work: () => {
-      window.location.href = 'work.html';
-    },
-    backHistory: () => {
-      javascript:window.history.back(-1);
-      return false;
-    },
-  },
-});
 
 // ======================================================
 
