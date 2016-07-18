@@ -1,6 +1,6 @@
 // ライブラリ
 import * as load from './load';
-import theMovieDb from 'themoviedb-javascript-library';
+import * as movie from './movie';
 
 // ======================================================
 
@@ -8,6 +8,8 @@ import theMovieDb from 'themoviedb-javascript-library';
 window.onload = () => {
   load.setEvent();
 };
+
+movie.showPopularMovies();
 
 // ======================================================
 
@@ -51,13 +53,3 @@ const adaptive_params = {
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================
-
-// idが1721のキーワードを取得
-theMovieDb.discover.getMovies({}, successCB, errorCB);
-function successCB(data) {
-  var data = JSON.parse(data);
-  console.log(data);
-};
-function errorCB(data) {
-  console.log("Error callback: " + data);
-};
