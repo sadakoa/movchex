@@ -17,9 +17,9 @@ block content
       include layouts/_nav.jade
               
     .l-main#main
-      form.p-search-form#search-form(name='search-form' method='GET')
-        input.p-search-form__input#search-input(type='text' placeholder='映画タイトルのキーワードで検索')
-        button.c-button.p-search-form__button#search-button(type='submit' name='action' value='send')
+      form.p-search-form#search-form(name='search-form' method='GET' onsubmit='return false;')
+        input.p-search-form__input#search-input(v-model='keyword' v-on:enter='sendKeyword' type='text' placeholder='映画タイトルのキーワードで検索')
+        button.c-button.p-search-form__button#search-button(v-on:click='sendKeyword' type='submit')
           | 検索
       
       .p-search-result
