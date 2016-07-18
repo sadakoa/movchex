@@ -17,7 +17,7 @@ import * as render from '../View/renderResult';
 export default function initialize() {
   setEvent();
   sendKeyword();
-  render.vm;
+  render.resultMovies;
 }
 
 // =============================================================
