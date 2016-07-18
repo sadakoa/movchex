@@ -1,6 +1,6 @@
 MOVHCEX
 ====
-![image](http://sadakoa.minibird.jp/img/movchex-lp.png)
+![image](http://sadakoa.minibird.jp/img/movchex.png)
 
 Overview
 

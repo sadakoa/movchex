@@ -3,5 +3,5 @@
 // =============================================================
 
 export default function showResultMovies(aData) {
-  console.log(aData.results[0].title);
+  console.log(aData.results[0]);
 }
