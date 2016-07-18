@@ -15,7 +15,9 @@
     * adaptiveBackground.js - 作品詳細のドミナントカラーに関する処理を行う
 
  * Controller - ViewとModelの処理に応じて全体を制御する要素
+    * route.js - ルーティングに関する処理を行う
     * setEvent.js - イベントリスナーを初期化、格納する処理を行う
+    * sendKeyword.js - 検索ページでユーザー入力を受け取る処理を行う
 
  */
 
