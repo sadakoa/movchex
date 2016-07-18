@@ -5,6 +5,7 @@
 // 利用モジュール & パッケージ =====================================
 import setEvent from '../Controller/setEvent';
 import sendKeyword from '../Controller/sendKeyword';
+import * as render from '../View/renderResult';
 // =============================================================
 
 // グローバル変数 ================================================
@@ -16,6 +17,7 @@ import sendKeyword from '../Controller/sendKeyword';
 export default function initialize() {
   setEvent();
   sendKeyword();
+  render.vm;
 }
 
 // =============================================================
