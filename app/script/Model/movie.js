@@ -20,3 +20,18 @@ export function showPopularMovies() {
     console.log('Error Callback');
   }
 }
+
+/**
+ * searchKeywordMovies - キーワードがタイトルに関係する映画を取得する関数
+ */
+export function searchKeywordMovies(aKeyword) {
+  theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
+  function successCB(data) {
+    console.log('Success Callback');
+    const parseData = JSON.parse(data);
+    console.log(parseData);
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}
