@@ -28,7 +28,7 @@ block content
             | 「ズートピア」
           | の検索結果
         ul.p-result-list.c-two-grid
-          li.p-result-list__item.is-added
+          li.p-result-list__item
             a(v-on:click='work').p-result-list__item--anchor
               img.p-result-list__item__image#movie-image(src='images/sample02.png')
               h3.p-result-list__item__title#movie-title
@@ -38,28 +38,17 @@ block content
                 | 2016
                 span.p-result-list__item__info__data#movie-genre
                   | Animation, History
-          li.p-result-list__item.is-watched
-            a(v-on:click='work').p-result-list__item--anchor
-              img.p-result-list__item__image#movie-image(src='images/sample02.png')
-              h3.p-result-list__item__title#movie-title
-                | ミッションインポッシブル
-              p.p-result-list__item__info
-                span.p-result-list__item__info__data#movie-release
-                  | 2016
-                | /
-                span.p-result-list__item__info__data#movie-genre
-                  | Animation, Adventure
-          li.p-result-list__item
-            a(v-on:click='work').p-result-list__item--anchor
-              img.p-result-list__item__image#movie-image(src='images/sample02.png')
-              h3.p-result-list__item__title#movie-title
-                | Zootopia
-              p.p-result-list__item__info
-                span.p-result-list__item__info__data#movie-release
-                  | 2016
-                | /
-                span.p-result-list__item__info__data#movie-genre
-                  | Animation, Adventure
+          //- li.p-result-list__item.is-added
+          //-   a(v-on:click='work').p-result-list__item--anchor
+          //-     img.p-result-list__item__image#movie-image(src='images/sample02.png')
+          //-     h3.p-result-list__item__title#movie-title
+          //-       | Zootopia
+          //-     p.p-result-list__item__info
+          //-       span.p-result-list__item__info__data#movie-release
+          //-       | 2016
+          //-       span.p-result-list__item__info__data#movie-genre
+          //-         | Animation, History
+
       include layouts/_footer.jade
 
             

@@ -4,6 +4,7 @@
 
 // 利用モジュール & パッケージ =====================================
 import theMovieDb from 'themoviedb-javascript-library'; // The Movie DBのREST API
+import showResultMovies from '../View/renderResult';
 // =============================================================
 
 /**
@@ -13,8 +14,7 @@ export function showPopularMovies() {
   theMovieDb.discover.getMovies({}, successCB, errorCB);
   function successCB(data) {
     console.log('Success Callback');
-    const parseData = JSON.parse(data);
-    console.log(parseData);
+    console.log(JSON.parse(data));
   }
   function errorCB(data) {
     console.log('Error Callback');
@@ -28,8 +28,7 @@ export function searchKeywordMovies(aKeyword) {
   theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
   function successCB(data) {
     console.log('Success Callback');
-    const parseData = JSON.parse(data);
-    console.log(parseData);
+    showResultMovies(JSON.parse(data));
   }
   function errorCB(data) {
     console.log('Error Callback');
