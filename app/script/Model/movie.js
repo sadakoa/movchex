@@ -23,6 +23,7 @@ export function getPopularMovies() {
     console.log('Error Callback');
   }
 }
+// =============================================================
 
 /**
  * searchKeywordMovies - キーワードがタイトルに関係する映画を取得する関数
@@ -36,6 +37,20 @@ export function getKeywordMovies(aKeyword) {
     } else {
       render.showResultMovies(worksData, aKeyword);
     }
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}
+
+// =============================================================
+
+// デバッグ用の関数
+export function debugMovies() {
+  // theMovieDb.movies.getById({"id":76203 }, successCB, errorCB);
+  theMovieDb.search.getMovie({"query": 'コードギアス'}, successCB, errorCB);
+  function successCB(data) {
+    console.log(JSON.parse(data).results[0].genre_ids);
   }
   function errorCB(data) {
     console.log('Error Callback');
