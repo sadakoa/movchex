@@ -20,6 +20,7 @@ export const resultMovies = new Vue({
   data: {
     works: array,
     keyword: '',
+    url: 'work.html',
   },
 });
 
