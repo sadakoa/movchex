@@ -3,7 +3,7 @@
 // =============================================================
 
 // 利用モジュール & パッケージ =====================================
-import theMovieDb from 'themoviedb-javascript-library'; // The Movie DBのREST API
+import theMovieDb from 'themoviedb-javascript-library';
 import * as render from '../View/renderResult';
 // =============================================================
 
@@ -44,15 +44,3 @@ export function getKeywordMovies(aKeyword) {
 }
 
 // =============================================================
-
-// デバッグ用の関数
-export function debugMovies() {
-  // theMovieDb.movies.getById({"id":76203 }, successCB, errorCB);
-  theMovieDb.search.getMovie({"query": 'コードギアス'}, successCB, errorCB);
-  function successCB(data) {
-    console.log(JSON.parse(data).results[0].genre_ids);
-  }
-  function errorCB(data) {
-    console.log('Error Callback');
-  }
-}
