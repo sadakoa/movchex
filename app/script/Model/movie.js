@@ -4,7 +4,7 @@
 
 // 利用モジュール & パッケージ =====================================
 import theMovieDb from 'themoviedb-javascript-library';
-import * as render from '../View/renderResult';
+import * as render from '../View/render';
 // =============================================================
 
 // グローバル変数 ================================================
