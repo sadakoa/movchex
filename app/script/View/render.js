@@ -33,12 +33,14 @@ export const resultMovies = new Vue({
 export function showResultMovies(aData, aKeyword) {
   let releaseDate; // リリース情報を格納する変数
   let sliceDate; // リリース情報を切り出した文字を格納する変数
+
   for(let i=0; i < aData.length; i++) {
+    // release_dateキーのvalueを書き換え
     releaseDate = aData[i].release_date;
     sliceDate = convert.sliceReleaseDate(releaseDate);
-    // release_dateキーのvalueを書き換え
     aData[i].release_date = sliceDate;
   }
+
   // resultMoviesのdata -> worksにJSONをセット
   resultMovies.$set('works', aData);
   // resultMoviesのdata -> keywordに検索キーワードをセット

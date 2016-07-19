@@ -35,8 +35,8 @@ block content
               p.p-result-list__item__info
                 span.p-result-list__item__info__data#movie-release
                   | ({{ work.release_date }})
-                span.p-result-list__item__info__data#movie-genre
-                  | / {{ work.genre_ids }}
+                span.p-result-list__item__info__data#movie-voteAverage
+                  | | 評価 : {{ work.vote_average }}/10
 
       include layouts/_footer.jade
 

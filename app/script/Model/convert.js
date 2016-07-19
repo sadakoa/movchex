@@ -46,7 +46,7 @@ export function renameGenre(aArray) {
 
 
 /**
- * sliceDate - リリース情報を (20XX)形式に変換する関数
+ * sliceReleaseDate - リリース情報を (20XX)形式に変換する関数
  *
  * @param  {String} aDate リリース情報
  */
