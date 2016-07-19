@@ -5,7 +5,7 @@
 // 利用モジュール & パッケージ =====================================
 import setEvent from '../Controller/setEvent';
 import * as send from '../Controller/send';
-import * as render from '../View/renderResult';
+import * as render from '../View/render';
 // =============================================================
 
 /**

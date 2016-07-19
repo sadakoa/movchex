@@ -30,6 +30,12 @@ export const MOVIE_GENRE = {
   37    : 'Western',
 };
 
+
+/**
+ * convertGenre - ジャンルのidを元に文字列の配列に変換する関数
+ *
+ * @param  {array} aArray ジャンルidの数値の配列
+ */
 export function convertGenre(aArray) {
   nameArray = [];
   for(let i =0; i < aArray.length; i++) {
