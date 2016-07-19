@@ -25,10 +25,19 @@ export const resultMovies = new Vue({
  * @param  {Array} worksData JSON内の配列
  */
 export function showResultMovies(aData, aKeyword) {
-  const worksData = aData.results;
-  console.log(worksData);
+  console.log(aData);
   // resultMoviesのdata -> worksにJSONをセット
-  resultMovies.$set('works', worksData);
+  resultMovies.$set('works', aData);
   // resultMoviesのdata -> keywordに検索キーワードをセット
   resultMovies.$set('keyword', '【' + aKeyword + '】の検索結果');
+}
+
+/**
+ * showResultMovies - APIから受け取ったデータが空の場合に実行される関数
+ */
+export function notExistMovies() {
+  // resultMoviesのdata -> worksに空文字列をセット
+  resultMovies.$set('works', '');
+  // resultMoviesのdata -> keywordに検索キーワードをセット
+  resultMovies.$set('keyword', '一致する映画は見つかりませんでした');
 }

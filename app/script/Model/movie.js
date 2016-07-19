@@ -7,6 +7,10 @@ import theMovieDb from 'themoviedb-javascript-library'; // The Movie DBのREST A
 import * as render from '../View/renderResult';
 // =============================================================
 
+// グローバル変数 ================================================
+let worksData; // JSON(オブジェクト)を格納する変数
+// =============================================================
+
 /**
  * showPopularMovies - 人気映画をAPIから取得、データを返す関数
  */
@@ -26,7 +30,12 @@ export function getPopularMovies() {
 export function getKeywordMovies(aKeyword) {
   theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
   function successCB(data) {
-    render.showResultMovies(JSON.parse(data), aKeyword);
+    worksData = JSON.parse(data).results;
+    if (worksData.length == 0) {
+      render.notExistMovies();
+    } else {
+      render.showResultMovies(worksData, aKeyword);
+    }
   }
   function errorCB(data) {
     console.log('Error Callback');
