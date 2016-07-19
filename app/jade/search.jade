@@ -25,11 +25,11 @@ block content
       .p-search-result
         h2.p-search-result__title(v-cloak)
           span.p-search-result__title__keyword
-            | {{ keyword }} 
+            | {{ keyword }}
         ul.p-result-list.c-two-grid
           li.p-result-list__item(v-for='work in works' v-cloak)
             a(href='work.html').p-result-list__item--anchor
-              img.p-result-list__item__image#movie-image(v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.poster_path")
+              img.p-result-list__item__image#movie-image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
               h3.p-result-list__item__title#movie-title
                 | {{ work.title }}
               p.p-result-list__item__info
