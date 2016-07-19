@@ -51,3 +51,9 @@ const adaptive_params = {
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================
+
+// var a = {
+//   name: 'sadakoa',
+// }
+// a.name = 'mamoru';
+// console.log(a.name);

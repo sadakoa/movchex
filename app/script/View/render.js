@@ -2,6 +2,10 @@
 // render.js - APIから返されたデータを受取りDOMに反映させる処理を行う
 // =============================================================
 
+// 利用モジュール & パッケージ =====================================
+import * as convert from '../Model/convert';
+// =============================================================
+
 // グローバル変数 ================================================
 let array = []; // 初期化用の配列
 // =============================================================
@@ -17,6 +21,8 @@ export const resultMovies = new Vue({
   },
 });
 
+// =============================================================
+
 /**
  * showResultMovies - APIからデータを受取りVue関数に配列として渡す関数
  *
@@ -25,12 +31,21 @@ export const resultMovies = new Vue({
  * @param  {Array} worksData JSON内の配列
  */
 export function showResultMovies(aData, aKeyword) {
-  console.log(aData);
+  let releaseDate; // リリース情報を格納する変数
+  let sliceDate; // リリース情報を切り出した文字を格納する変数
+  for(let i=0; i < aData.length; i++) {
+    releaseDate = aData[i].release_date;
+    sliceDate = convert.sliceReleaseDate(releaseDate);
+    // release_dateキーのvalueを書き換え
+    aData[i].release_date = sliceDate;
+  }
   // resultMoviesのdata -> worksにJSONをセット
   resultMovies.$set('works', aData);
   // resultMoviesのdata -> keywordに検索キーワードをセット
   resultMovies.$set('keyword', '【' + aKeyword + '】の検索結果');
 }
+
+// =============================================================
 
 /**
  * showResultMovies - APIから受け取ったデータが空の場合に実行される関数

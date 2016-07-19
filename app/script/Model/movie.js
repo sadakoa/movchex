@@ -23,6 +23,7 @@ export function getPopularMovies() {
     console.log('Error Callback');
   }
 }
+
 // =============================================================
 
 /**
