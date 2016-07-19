@@ -29,7 +29,8 @@ block content
         ul.p-result-list.c-two-grid
           li.p-result-list__item(v-for='work in works' v-cloak)
             a(href='work.html').p-result-list__item--anchor
-              img.p-result-list__item__image#movie-image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+              img.p-result-list__item__image#movie-image(v-if='work.poster_path !== null' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+              img.p-result-list__item__image#movie-image(v-else src='images/substitute.png' alt='画像はありません')
               h3.p-result-list__item__title#movie-title
                 | {{ work.title }}
               p.p-result-list__item__info
