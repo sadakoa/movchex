@@ -6,6 +6,10 @@
 import * as movie from '../Model/movie';
 // =============================================================
 
+
+/**
+ * sendKeyword - フォームに入力された値をAPIを叩く関数に渡す
+ */
 export default function sendKeyword() {
   new Vue({
     el: '#search-form',

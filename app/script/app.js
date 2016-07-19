@@ -45,6 +45,7 @@ const adaptive_params = {
   lumaClasses: { light: 'ab-light', dark: 'ab-dark' },
 };
 
+// adaptive-backgrounds.jsを実行
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================

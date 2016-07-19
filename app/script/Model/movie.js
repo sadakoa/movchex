@@ -13,7 +13,6 @@ import * as render from '../View/renderResult';
 export function getPopularMovies() {
   theMovieDb.discover.getMovies({}, successCB, errorCB);
   function successCB(data) {
-    console.log('Success Callback');
     console.log(JSON.parse(data));
   }
   function errorCB(data) {
@@ -27,7 +26,6 @@ export function getPopularMovies() {
 export function getKeywordMovies(aKeyword) {
   theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
   function successCB(data) {
-    console.log('Success Callback');
     render.showResultMovies(JSON.parse(data));
   }
   function errorCB(data) {
