@@ -8,6 +8,8 @@ import * as convert from '../Model/convert';
 
 // グローバル変数 ================================================
 let array = []; // 初期化用の配列
+let releaseDate; // リリース情報を格納する変数
+let sliceDate; // リリース情報を切り出した文字を格納する変数
 // =============================================================
 
 /**
@@ -31,11 +33,8 @@ export const resultMovies = new Vue({
  * @param  {Array} worksData JSON内の配列
  */
 export function showResultMovies(aData, aKeyword) {
-  let releaseDate; // リリース情報を格納する変数
-  let sliceDate; // リリース情報を切り出した文字を格納する変数
-
-  for(let i=0; i < aData.length; i++) {
-    // release_dateキーのvalueを書き換え
+  // release_dateキーのvalueを配列の数だけ更新する
+  for (let i = 0; i < aData.length; i++) {
     releaseDate = aData[i].release_date;
     sliceDate = convert.sliceReleaseDate(releaseDate);
     aData[i].release_date = sliceDate;
