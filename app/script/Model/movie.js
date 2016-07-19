@@ -10,7 +10,7 @@ import * as render from '../View/renderResult';
 /**
  * showPopularMovies - 人気映画をAPIから取得、データを返す関数
  */
-export function showPopularMovies() {
+export function getPopularMovies() {
   theMovieDb.discover.getMovies({}, successCB, errorCB);
   function successCB(data) {
     console.log('Success Callback');
@@ -24,7 +24,7 @@ export function showPopularMovies() {
 /**
  * searchKeywordMovies - キーワードがタイトルに関係する映画を取得する関数
  */
-export function searchKeywordMovies(aKeyword) {
+export function getKeywordMovies(aKeyword) {
   theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
   function successCB(data) {
     console.log('Success Callback');

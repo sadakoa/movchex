@@ -12,7 +12,7 @@ import * as render from '../View/renderResult';
 // =============================================================
 
 /**
- * SetEvent - イベントリスナーを初期化する関数
+ * initialize - 初回読み込み時に各種要素を初期化・設定する関数
  */
 export default function initialize() {
   setEvent();

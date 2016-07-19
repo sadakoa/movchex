@@ -15,7 +15,7 @@ export default function sendKeyword() {
     methods: {
       sendKeyword: function() {
         let text = this.keyword.trim();
-        movie.searchKeywordMovies(text);
+        movie.getKeywordMovies(text);
       },
     },
   });
