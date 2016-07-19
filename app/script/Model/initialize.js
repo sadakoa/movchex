@@ -4,7 +4,7 @@
 
 // 利用モジュール & パッケージ =====================================
 import setEvent from '../Controller/setEvent';
-import sendKeyword from '../Controller/sendKeyword';
+import * as send from '../Controller/send';
 import * as render from '../View/renderResult';
 // =============================================================
 
@@ -16,7 +16,7 @@ import * as render from '../View/renderResult';
  */
 export default function initialize() {
   setEvent();
-  sendKeyword();
+  send.inputKeyword;
   render.resultMovies;
 }
 
