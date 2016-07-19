@@ -8,16 +8,13 @@ import * as send from '../Controller/send';
 import * as render from '../View/renderResult';
 // =============================================================
 
-// グローバル変数 ================================================
-// =============================================================
-
 /**
  * initialize - 初回読み込み時に各種要素を初期化・設定する関数
  */
 export default function initialize() {
-  setEvent();
-  send.inputKeyword;
-  render.resultMovies;
+  setEvent(); // イベントリスナーを初期化
+  send.inputKeyword; // 検索画面でのユーザー入力に関するVueインスタンス
+  render.resultMovies; // 検索結果をレンダリングするVueインスタンス
 }
 
 // =============================================================

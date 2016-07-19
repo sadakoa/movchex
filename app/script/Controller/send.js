@@ -6,7 +6,6 @@
 import * as movie from '../Model/movie';
 // =============================================================
 
-
 /**
  * inputKeyword - フォームに入力された値をAPIを叩く関数に渡す
  */
@@ -17,8 +16,8 @@ export const inputKeyword =  new Vue({
   },
   methods: {
     sendKeyword: function() {
-    let text = this.keyword.trim();
-    movie.getKeywordMovies(text);
+      let text = this.keyword.trim();
+      movie.getKeywordMovies(text);
     },
   },
 });

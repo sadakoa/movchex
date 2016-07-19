@@ -19,19 +19,20 @@
  * Controller - ViewとModelの処理に応じて全体を制御する要素
     * route.js - ルーティングに関する処理を行う
     * setEvent.js - イベントリスナーを初期化、格納する処理を行う
-    * sendKeyword.js - 検索ページでユーザー入力を受け取る処理を行う
+    * send.js - ユーザーの入力を受け取る処理を行う
   ---------------------------------------------------------
  */
 
-// ======================================================
-
+// 利用モジュール & パッケージ =====================================
 import initialize from './Model/initialize';
 import route from './Controller/route';
 import adaptiveBackground from './View/adaptiveBackground';
+// =============================================================
 
+// HTMLが読み込まれた後に実行する
 window.onload = () => {
-  initialize();
-  route();
+  initialize(); // 初期化処理
+  route();      // ルーティング
 };
 
 // ======================================================
