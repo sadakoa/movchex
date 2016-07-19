@@ -32,14 +32,25 @@ export const MOVIE_GENRE = {
 
 
 /**
- * convertGenre - ジャンルのidを元に文字列の配列に変換する関数
+ * renameGenre - ジャンルのidを元に文字列の配列に変換する関数
  *
  * @param  {array} aArray ジャンルidの数値の配列
  */
-export function convertGenre(aArray) {
+export function renameGenre(aArray) {
   nameArray = [];
   for(let i =0; i < aArray.length; i++) {
     nameArray.push(MOVIE_GENRE[aArray[i]]);
   }
   return nameArray;
+}
+
+
+/**
+ * sliceDate - リリース情報を (20XX)形式に変換する関数
+ *
+ * @param  {String} aDate リリース情報
+ */
+export function sliceReleaseDate(aDate) {
+  const result = aDate.slice(0, 4);
+  return result;
 }
