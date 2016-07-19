@@ -10,6 +10,7 @@
  * Model - 処理の中枢(ビジネスロジック)を担う要素
     * initialize.js - HTMLが読み込まれた後に初期化する処理を行う
     * movie.js - The Movie DBのAPIに関係する処理を行う
+    * convert.js - 受け取った情報を変換する処理を行う
   ---------------------------------------------------------
  * View  - 表示・出力に関係する処理を担う要素
     * navigation.js - スライドメニュ-の開閉処理を行う
@@ -50,3 +51,6 @@ const adaptive_params = {
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================
+
+// import * as movie from './Model/movie';
+// movie.debugMovies();
