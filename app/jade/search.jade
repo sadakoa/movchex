@@ -23,10 +23,9 @@ block content
           | 検索
       
       .p-search-result
-        h2.p-search-result__title
+        h2.p-search-result__title(v-cloak)
           span.p-search-result__title__keyword
-            | キーワード
-          | の検索結果
+            | {{ keyword }} 
         ul.p-result-list.c-two-grid
           li.p-result-list__item(v-for='work in works' v-cloak)
             a(href='work.html').p-result-list__item--anchor

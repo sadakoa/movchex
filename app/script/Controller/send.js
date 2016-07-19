@@ -16,8 +16,8 @@ export const inputKeyword =  new Vue({
   },
   methods: {
     sendKeyword: function() {
-      let text = this.keyword.trim();
-      movie.getKeywordMovies(text);
+      let keyword = this.keyword.trim();
+      movie.getKeywordMovies(keyword);
     },
   },
 });

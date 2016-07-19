@@ -26,7 +26,7 @@ export function getPopularMovies() {
 export function getKeywordMovies(aKeyword) {
   theMovieDb.search.getMovie({"query": aKeyword}, successCB, errorCB);
   function successCB(data) {
-    render.showResultMovies(JSON.parse(data));
+    render.showResultMovies(JSON.parse(data), aKeyword);
   }
   function errorCB(data) {
     console.log('Error Callback');
