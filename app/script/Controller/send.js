@@ -16,6 +16,8 @@ export const inputKeyword =  new Vue({
   },
   methods: {
     sendKeyword: function() {
+      // inputがからの場合は処理を終了する
+      if (this.keyword === '') { return; }
       let keyword = this.keyword.trim();
       movie.getKeywordMovies(keyword);
     },
