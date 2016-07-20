@@ -21,7 +21,7 @@ block content
 
         .p-movie-backdrop
           img.p-movie-backdrop__image(v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path " alt='背景画像')
-          img.p-movie-backdrop__play(src='images/button/play-button.png' alt='再生' width='50')
+          img.p-movie-backdrop__site-link(src='images/button/link-button.png' alt='公式サイトへ飛ぶ' width='50')
 
         .p-movie-info
           img.p-movie-info__image(v-if='work.poster_path !== null' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
