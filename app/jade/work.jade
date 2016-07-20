@@ -20,15 +20,15 @@ block content
       .p-movie-detail(v-cloak)
 
         .p-movie-backdrop
-          img.p-movie-backdrop__image(v-if='work.backdrop_path' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path")
-          img.p-movie-backdrop__image(v-else src='images/substitute.png')
+          img.p-movie-backdrop__image(v-if='work.backdrop_path' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path " )
+          img.p-movie-backdrop__image(v-else src='images/load/backdrop.png' )
             
           a(v-bind:href='work.homepage' target='_brank')
             img.p-movie-backdrop__site-link(src='images/button/link-button.png' alt='公式サイトへ飛ぶ' width='50')
 
         .p-movie-info
           img.p-movie-info__image(v-if='work.poster_path' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
-          img.p-movie-info__image(v-else src='images/substitute.png'data-adaptive-background)
+          img.p-movie-info__image(v-else src='images/load/poster.png' data-adaptive-background)
           .p-movie-info__block
             h2.p-movie-info__block__title
               | {{ work.original_title }}
