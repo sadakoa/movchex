@@ -26,7 +26,7 @@
 
 // 利用モジュール & パッケージ =====================================
 import initialize from './Model/initialize';
-import { setRoutes } from './Controller/route';
+import * as route from './Controller/route';
 import adaptiveBackground from './View/adaptiveBackground';
 import Dispatcher from 'url-dispatcher';
 // =============================================================
@@ -34,7 +34,8 @@ import Dispatcher from 'url-dispatcher';
 // HTMLが読み込まれた後に実行する
 window.onload = () => {
   initialize(); // 初期化処理
-  setRoutes;      // ルーティング
+  route.setRoutes;      // ルーティング
+  route.dispatcher.run(location.href); // URLディスパッチャー
 };
 
 // ======================================================
