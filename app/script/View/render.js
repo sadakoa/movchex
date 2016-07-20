@@ -69,7 +69,10 @@ export function notExistMovies() {
 export const detailMovie = new Vue({
   el: '.p-movie-detail',
   data: {
-    work: '',
+    work: {
+      poster_path: null,
+      backdrop_path: null,
+    },
   },
 });
 
