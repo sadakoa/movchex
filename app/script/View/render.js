@@ -58,3 +58,15 @@ export function notExistMovies() {
   // resultMoviesのdata -> keywordに検索キーワードをセット
   resultMovies.$set('keyword', '一致する映画は見つかりませんでした');
 }
+
+// =============================================================
+
+/**
+ * 作品の詳細情報をレンダリングするVueインスタンス
+ */
+export const detailMovie = new Vue({
+  el: '.p-movie-detail',
+  data: {
+    work: '',
+  },
+});
