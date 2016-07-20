@@ -98,4 +98,10 @@ export function showDetailMovie(aData) {
 
   // detailMovieのdata -> worksにJSONをセット
   detailMovie.$set('work', aData);
+
+  /**
+   * 関数実行を瞬間的に遅らせているためVueインスタンスに
+   * 画像srcがセットされてから実行される
+   */
+  setTimeout(convert.changeBackground, 1);
 }

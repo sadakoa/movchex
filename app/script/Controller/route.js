@@ -4,7 +4,6 @@
 
 // 利用モジュール & パッケージ =====================================
 import * as movie from '../Model/movie';
-import * as convert from '../Model/convert';
 // =============================================================
 
 /**
@@ -41,7 +40,6 @@ export function urlDispatcher() {
     // URLのパラメータを変数に格納
     const urlPair = Number(location.search.substring(1).split('&'));
     movie.getIdMovie(urlPair);
-    convert.changeBackground();
   } else {
     return;
   }
