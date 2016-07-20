@@ -47,7 +47,6 @@ export function getKeywordMovies(aKeyword) {
 
 // =============================================================
 
-
 /**
  * getIdMovies - idに紐づく映画情報をAPIから取得する関数
  *
@@ -58,6 +57,18 @@ export function getIdMovie(aId) {
   function successCB(data) {
     detailData = JSON.parse(data);
     render.showDetailMovie(detailData);
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}
+
+// =============================================================
+
+export function getTrailerMovie(aId) {
+  theMovieDb.movies.getTrailers({"id": aId}, successCB, errorCB)
+  function successCB(data) {
+    console.log(JSON.parse(data));
   }
   function errorCB(data) {
     console.log('Error Callback');
