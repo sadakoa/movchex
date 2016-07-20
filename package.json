@@ -37,7 +37,6 @@
   "dependencies": {
     "store": "^1.3.20",
     "themoviedb-javascript-library": "^1.0.0",
-    "url-dispatcher": "^0.1.5",
     "vue-resource": "^0.9.3"
   }
 }
