@@ -8,6 +8,8 @@ import * as convert from '../Model/convert';
 
 // グローバル変数 ================================================
 let array = []; // 初期化用の配列
+let genreArray = []; // ジャンル用の配列
+let genreLength; // ジャンル用の配列個数
 let releaseDate; // リリース情報を格納する変数
 let sliceDate; // リリース情報を切り出した文字を格納する変数
 // =============================================================
@@ -85,14 +87,14 @@ export function showDetailMovie(aData) {
   releaseDate = aData.release_date;
   sliceDate = convert.sliceReleaseDate(releaseDate);
   aData.release_date = sliceDate;
-  let gArray = [];
 
   // ジャンル名を文字列にしてオブジェクトのkeyを書き換える
-  for(let i = 0; i < aData.genres.length; i++) {
-  let x = aData.genres[i].name;
-    gArray.push(x);
+  genreLength = aData.genres.length;
+  for(let i = 0; i < genreLength; i++) {
+    let x = aData.genres[i].name;
+    genreArray.push(x);
   }
-  aData.genres = gArray;
+  aData.genres = genreArray;
 
   // detailMovieのdata -> worksにJSONをセット
   detailMovie.$set('work', aData);
