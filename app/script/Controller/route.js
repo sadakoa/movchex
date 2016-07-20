@@ -3,7 +3,6 @@
 // =============================================================
 
 // 利用モジュール & パッケージ =====================================
-import Dispatcher from 'url-dispatcher';
 import * as movie from '../Model/movie';
 // import * as convert from '../Model/convert';
 // =============================================================
@@ -30,24 +29,12 @@ export const setRoutes = new Vue({
   },
 });
 
-// =============================================================
-
-/**
- * dispatcher - URLによって処理を振り分ける関数式
- */
-export const dispatcher = new Dispatcher({
-  routes: {
-    // index ============================================
-    '/index.html': function() {
-    },
-    // search ============================================
-    '/search.html': function() {
-    },
-    // work ============================================
-    '/work.html': function(aId) {
-      const id = Number(aId);
-      movie.getIdMovie(id);
-      // convert.changeBackground();
-    },
-  },
-});
+export function urlDispatcher() {
+  let mainId = $('.l-main').attr('id');
+  if (mainId === 'work-main') {
+    const urlPair = Number(location.search.substring(1).split('&'));
+    console.log(urlPair); // 234
+  } else {
+    return;
+  }
+}

@@ -41,7 +41,7 @@ import * as route from './Controller/route';
 window.onload = () => {
   initialize(); // 初期化処理
   route.setRoutes;      // ルーティング
-  route.dispatcher.run(location.href); // URLディスパッチャー
+  route.urlDispatcher();
 };
 
 // =============================================================
