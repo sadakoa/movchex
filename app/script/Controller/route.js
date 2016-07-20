@@ -5,7 +5,7 @@
 // 利用モジュール & パッケージ =====================================
 import Dispatcher from 'url-dispatcher';
 import * as movie from '../Model/movie';
-import * as convert from '../Model/convert';
+// import * as convert from '../Model/convert';
 // =============================================================
 
 /**
@@ -46,8 +46,8 @@ export const dispatcher = new Dispatcher({
     // work ============================================
     '/work.html': function(aId) {
       const id = Number(aId);
-      movie.getIdMovies();
-      convert.changeBackground();
+      movie.getIdMovies(id);
+      // convert.changeBackground();
     },
   },
 });
