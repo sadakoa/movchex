@@ -46,7 +46,7 @@ export const dispatcher = new Dispatcher({
     // work ============================================
     '/work.html': function(aId) {
       const id = Number(aId);
-      movie.getIdMovies(id);
+      movie.getIdMovie(id);
       // convert.changeBackground();
     },
   },

@@ -52,7 +52,7 @@ export function getKeywordMovies(aKeyword) {
  *
  * @param  {type} aId 映画作品のID名
  */
-export function getIdMovies(aId) {
+export function getIdMovie(aId) {
   theMovieDb.movies.getById({"id": aId}, successCB, errorCB)
   function successCB(data) {
     console.log(JSON.parse(data));
