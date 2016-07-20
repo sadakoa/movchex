@@ -26,14 +26,15 @@
 
 // 利用モジュール & パッケージ =====================================
 import initialize from './Model/initialize';
-import route from './Controller/route';
+import { setRoutes } from './Controller/route';
 import adaptiveBackground from './View/adaptiveBackground';
+import Dispatcher from 'url-dispatcher';
 // =============================================================
 
 // HTMLが読み込まれた後に実行する
 window.onload = () => {
   initialize(); // 初期化処理
-  route();      // ルーティング
+  setRoutes;      // ルーティング
 };
 
 // ======================================================
@@ -51,3 +52,9 @@ const adaptive_params = {
 $.adaptiveBackground.run(adaptive_params);
 
 // ======================================================
+
+// import * as movie from './Model/movie';
+// movie.getIdMovies();
+
+// const urlPair = Number(location.search.substring(2).split('&'));
+// console.log(urlPair);
