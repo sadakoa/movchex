@@ -8,7 +8,8 @@ import * as render from '../View/render';
 // =============================================================
 
 // グローバル変数 ================================================
-let worksData; // JSON(オブジェクト)を格納する変数
+let worksData; // 映画情報のJSON(配列)を格納する変数
+let detailData; // 映画の作品情報のJSON(オブジェクト)を格納する変数
 // =============================================================
 
 /**
@@ -55,7 +56,8 @@ export function getKeywordMovies(aKeyword) {
 export function getIdMovie(aId) {
   theMovieDb.movies.getById({"id": aId}, successCB, errorCB)
   function successCB(data) {
-    console.log(JSON.parse(data));
+    detailData = JSON.parse(data);
+    render.showDetailMovie(detailData);
   }
   function errorCB(data) {
     console.log('Error Callback');
