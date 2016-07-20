@@ -80,4 +80,20 @@ export const detailMovie = new Vue({
  */
 export function showDetailMovie(aData) {
   console.log(aData);
+
+  // リリース情報を(20XX)にするように変換
+  releaseDate = aData.release_date;
+  sliceDate = convert.sliceReleaseDate(releaseDate);
+  aData.release_date = sliceDate;
+  let gArray = [];
+
+  // ジャンル名を文字列にしてオブジェクトのkeyを書き換える
+  for(let i = 0; i < aData.genres.length; i++) {
+  let x = aData.genres[i].name;
+    gArray.push(x);
+  }
+  aData.genres = gArray;
+
+  // detailMovieのdata -> worksにJSONをセット
+  detailMovie.$set('work', aData);
 }
