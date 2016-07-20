@@ -27,7 +27,6 @@
 // 利用モジュール & パッケージ =====================================
 import initialize from './Model/initialize';
 import * as route from './Controller/route';
-import Dispatcher from 'url-dispatcher';
 // =============================================================
 
 // HTMLが読み込まれた後に実行する
@@ -41,6 +40,3 @@ window.onload = () => {
 
 // import * as movie from './Model/movie';
 // movie.getIdMovies();
-
-// const urlPair = Number(location.search.substring(2).split('&'));
-// console.log(urlPair);
