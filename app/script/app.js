@@ -27,7 +27,6 @@
 // 利用モジュール & パッケージ =====================================
 import initialize from './Model/initialize';
 import * as route from './Controller/route';
-import adaptiveBackground from './View/adaptiveBackground';
 import Dispatcher from 'url-dispatcher';
 // =============================================================
 
@@ -38,21 +37,7 @@ window.onload = () => {
   route.dispatcher.run(location.href); // URLディスパッチャー
 };
 
-// ======================================================
-
-// jquery.adaptive-backgrounds.jsのオプション
-const adaptive_params = {
-  selector: '.p-movie-info__image',
-  parent: '.l-work-main',
-  normalizeTextColor: true,
-  normalizedTextColors: { dark: '#000', light: '#fff' },
-  lumaClasses: { light: 'ab-light', dark: 'ab-dark' },
-};
-
-// adaptive-backgrounds.jsを実行
-$.adaptiveBackground.run(adaptive_params);
-
-// ======================================================
+// =============================================================
 
 // import * as movie from './Model/movie';
 // movie.getIdMovies();
