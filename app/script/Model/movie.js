@@ -45,3 +45,19 @@ export function getKeywordMovies(aKeyword) {
 }
 
 // =============================================================
+
+
+/**
+ * getIdMovies - idに紐づく映画情報をAPIから取得する関数
+ *
+ * @param  {type} aId 映画作品のID名
+ */
+export function getIdMovies(aId) {
+  theMovieDb.movies.getById({"id": aId}, successCB, errorCB)
+  function successCB(data) {
+    console.log(JSON.parse(data));
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}
