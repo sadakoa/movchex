@@ -70,3 +70,14 @@ export const detailMovie = new Vue({
     work: '',
   },
 });
+
+// =============================================================
+
+/**
+ * showDetailMovie - APIからデータを受取りVue関数にオブジェクトを渡す関数
+ *
+ * @param  {JSON} aData JSONデータ
+ */
+export function showDetailMovie(aData) {
+  console.log(aData);
+}
