@@ -15,6 +15,7 @@ export default function initialize() {
   setEvent(); // イベントリスナーを初期化
   send.inputKeyword; // 検索画面でのユーザー入力に関するVueインスタンス
   render.resultMovies; // 検索結果をレンダリングするVueインスタンス
+  render.detailMovie;  // 作品情報をレンダリングするVueインスタンス
 }
 
 // =============================================================
