@@ -52,8 +52,8 @@ export function getKeywordMovies(aKeyword) {
  *
  * @param  {type} aId 映画作品のID名
  */
-export function getIdMovies(aId) {
-  theMovieDb.movies.getById({"id": aId}, successCB, errorCB)
+export function getIdMovies() {
+  theMovieDb.movies.getById({"id": 392}, successCB, errorCB)
   function successCB(data) {
     console.log(JSON.parse(data));
   }

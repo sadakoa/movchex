@@ -2,6 +2,10 @@
 // convert.js : 受け取った情報を変換する処理を行う
 // =============================================================
 
+// 利用モジュール & パッケージ =====================================
+import adaptiveBackground from '../View/adaptiveBackground';
+// =============================================================
+
 // グローバル変数 ================================================
 let nameArray; // id名から文字に変換したジャンルを格納する配列
 // =============================================================
@@ -30,6 +34,7 @@ export const MOVIE_GENRE = {
   37    : 'Western',
 };
 
+// =============================================================
 
 /**
  * renameGenre - ジャンルのidを元に文字列の配列に変換する関数
@@ -44,6 +49,7 @@ export function renameGenre(aArray) {
   return nameArray;
 }
 
+// =============================================================
 
 /**
  * sliceReleaseDate - リリース情報を (20XX)形式に変換する関数
@@ -53,4 +59,22 @@ export function renameGenre(aArray) {
 export function sliceReleaseDate(aDate) {
   const result = aDate.slice(0, 4);
   return result;
+}
+
+// =============================================================
+
+/**
+ * changeBackground - ドミナントカラーを取得して指定した領域の背景色を変更する関数
+ */
+export function changeBackground() {
+  // adaptive-backgrounds.jsのオプション
+  const adaptive_params = {
+    selector: '.p-movie-info__image',
+    parent: '.l-work-main',
+    normalizeTextColor: true,
+    normalizedTextColors: { dark: '#000', light: '#fff' },
+    lumaClasses: { light: 'ab-light', dark: 'ab-dark' },
+  };
+  // adaptive-backgrounds.jsを実行
+  $.adaptiveBackground.run(adaptive_params);
 }

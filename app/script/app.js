@@ -45,6 +45,3 @@ window.onload = () => {
 };
 
 // =============================================================
-
-// import * as movie from './Model/movie';
-// movie.getIdMovies();
