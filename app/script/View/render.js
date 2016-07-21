@@ -85,6 +85,7 @@ export const detailMovie = new Vue({
     },
     popularWorks: '',
     url: 'work.html',
+    buttonText: 'INBOXに追加する',
   },
   methods: {
     addInbox: function() {
@@ -95,6 +96,10 @@ export const detailMovie = new Vue({
       inboxArray.push(data);
       // ブラウザストレージに登録
       storage.setStorage(inboxArray);
+
+      // テキスト文言とスタイルを変更
+      this.$els.pushButton.textContent = '追加済み';
+      this.$els.pushButton.classList.add('is-addPush');
     }
   },
 });
