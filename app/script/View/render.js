@@ -31,6 +31,7 @@ export const inboxLists = new Vue({
   data: {
     text: '',
     works: '',
+    url: 'work.html'
   },
   methods: {
     search: function() {
