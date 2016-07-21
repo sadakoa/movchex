@@ -29,8 +29,13 @@ if (inboxArray == null) {
 export const inboxLists = new Vue({
   el: '#inbox-main',
   data: {
-    text: 'hello',
+    text: '',
   },
+  methods: {
+    search: function() {
+      window.location.href = 'search.html';
+    }
+  }
 });
 
 // =============================================================

@@ -17,7 +17,7 @@ block content
       include layouts/_nav.jade
               
     .l-main#inbox-main
-      .p-empty-message
+      .p-empty-message(v-html='text' v-cloak)
         img.p-empty-message__image(src='images/icon/popcorn.svg' alt='ポップコーン')
         p.p-empty-message__text
           | これから観る予定の映画を
