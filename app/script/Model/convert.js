@@ -85,6 +85,13 @@ export function changeBackground() {
 
 // =============================================================
 
+
+/**
+ * showRandomNum - ランダムな数値を返す関数
+ *
+ * @param {number} MAX - 最大値
+ * @param {number} MIN - 最小値
+ */
 export function showRandomNum() {
   const randomNum = Math.floor(( Math.random() * ( ( MAX + 1 ) - MIN ) ) + MIN);
   return randomNum;

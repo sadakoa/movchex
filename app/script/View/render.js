@@ -111,6 +111,12 @@ export function showDetailMovie(aData) {
 
 // =============================================================
 
+
+/**
+ * showRandomPopularMovies - 人気映画を上位3件のみ出力する関数
+ *
+ * @param  {type} aData JSONデータ
+ */
 export function showRandomPopularMovies(aData) {
   let randomPopularArray = [];
   // ページの上位3件のみ取得する
