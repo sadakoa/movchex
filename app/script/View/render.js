@@ -67,7 +67,7 @@ export function notExistMovies() {
  * 作品の詳細情報をレンダリングするVueインスタンス
  */
 export const detailMovie = new Vue({
-  el: '.p-movie-detail',
+  el: '#work-main',
   data: {
     work: {
       poster_path: null,
