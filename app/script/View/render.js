@@ -24,6 +24,18 @@ if (inboxArray == null) {
 // =============================================================
 
 /**
+ * INBOXページの情報をレンダリングするVueインスタンス
+ */
+export const inboxLists = new Vue({
+  el: '#inbox-main',
+  data: {
+    text: 'hello',
+  },
+});
+
+// =============================================================
+
+/**
  * 検索結果をレンダリングするVueインスタンス
  */
 export const resultMovies = new Vue({
