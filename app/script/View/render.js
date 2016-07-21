@@ -89,6 +89,14 @@ export const detailMovie = new Vue({
   },
   methods: {
     addInbox: function() {
+
+      // もし追加ボタンに以下のクラスがついていたら処理を止める
+      if ($('.p-push__button').hasClass('is-addPush')) {
+        alert('INBOXに追加されています')
+        return;
+      }
+
+      // INBOXに追加する処理
       let data = this.work;
       // 視聴ステータスを追加 true - inboxに追加してある / false - 追加していない
       data['pushStatus'] = true;

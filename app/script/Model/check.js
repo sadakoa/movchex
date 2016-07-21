@@ -10,7 +10,7 @@ export function seekIdMovies(aId, aData) {
   for (let i=0; i < aData.length; i++) {
     storageIdData = aData[i].id;
     if (storageIdData === aId) {
-      console.info(`${storageIdData}が一致したのでボタンのステータスを変更する`);
+      $('.p-push__button').addClass('is-addPush').text('追加済み');
     }
   }
 }
