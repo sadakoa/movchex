@@ -16,9 +16,14 @@ let sliceDate; // リリース情報を切り出した文字を格納する変�
 let inboxArray = storage.getStorage(); // ストレージデータの配列
 // =============================================================
 
-// 初期化
+// ロード時配列にストレージデータがある場合にチェック作業を行う
+// もしストレージデータがない場合は初期化をする
 if (inboxArray == null) {
   inboxArray = [];
+} else {
+  console.log('ここでデータのチェックを行う');
+  const urlPair = Number(location.search.substring(1).split('&'));
+  console.log(urlPair);
 }
 
 // =============================================================

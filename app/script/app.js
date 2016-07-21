@@ -42,7 +42,7 @@ import * as route from './Controller/route';
 window.onload = () => {
   initialize(); // 初期化処理
   route.setRoutes;      // ルーティング
-  route.urlDispatcher();
+  route.urlDispatcher(); // URL別で関数を実行する
 };
 
 // =============================================================
