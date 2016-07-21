@@ -76,6 +76,11 @@ export const detailMovie = new Vue({
     popularWorks: '',
     url: 'work.html',
   },
+  methods: {
+    addInbox: function() {
+      console.log('hello');
+    }
+  },
 });
 
 // =============================================================

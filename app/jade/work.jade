@@ -54,7 +54,7 @@ block content
                 img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
 
       .p-push
-        button.c-button.p-push__button#push-button
+        button.c-button.p-push__button(v-on:click='addInbox')
           | INBOXに追加する
           
       include layouts/_footer.jade
