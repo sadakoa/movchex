@@ -84,8 +84,6 @@ export const detailMovie = new Vue({
  * @param  {JSON} aData JSONデータ
  */
 export function showDetailMovie(aData) {
-  console.log(aData);
-
   // リリース情報を(20XX)にするように変換
   releaseDate = aData.release_date;
   sliceDate = convert.sliceReleaseDate(releaseDate);
@@ -107,4 +105,10 @@ export function showDetailMovie(aData) {
    * 画像srcがセットされてから実行される
    */
   setTimeout(convert.changeBackground, 1);
+}
+
+// =============================================================
+
+export function showRandomPopularMovies(aData) {
+  console.log(aData);
 }

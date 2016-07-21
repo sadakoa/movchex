@@ -10,15 +10,17 @@ import * as render from '../View/render';
 // グローバル変数 ================================================
 let worksData; // 映画情報のJSON(配列)を格納する変数
 let detailData; // 映画の作品情報のJSON(オブジェクト)を格納する変数
+let popularData; // 人気作品の映画
 // =============================================================
 
 /**
- * showPopularMovies - 人気映画をAPIから取得、データを返す関数
+ * getRandomPopularMovies - 人気映画をAPIから取得、データを返す関数
  */
-export function getPopularMovies() {
-  theMovieDb.discover.getMovies({}, successCB, errorCB);
+export function getRandomPopularMovies(pageId) {
+  theMovieDb.discover.getMovies({page: pageId}, successCB, errorCB);
   function successCB(data) {
-    console.log(JSON.parse(data));
+    popularData = JSON.parse(data).results;
+    render.showRandomPopularMovies(popularData);
   }
   function errorCB(data) {
     console.log('Error Callback');

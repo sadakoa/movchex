@@ -34,6 +34,10 @@ export const MOVIE_GENRE = {
   37    : 'Western',
 };
 
+// 人気映画を検索するページ範囲
+const MAX = 20;
+const MIN = 1;
+
 // =============================================================
 
 /**
@@ -77,4 +81,11 @@ export function changeBackground() {
   };
   // adaptive-backgrounds.jsを実行
   $.adaptiveBackground.run(adaptive_params);
+}
+
+// =============================================================
+
+export function showRandomNum() {
+  const randomNum = Math.floor(( Math.random() * ( ( MAX + 1 ) - MIN ) ) + MIN);
+  return randomNum;
 }
