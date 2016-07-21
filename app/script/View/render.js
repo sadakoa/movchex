@@ -4,6 +4,7 @@
 
 // 利用モジュール & パッケージ =====================================
 import * as convert from '../Model/convert';
+import * as storage from '../Model/storage';
 // =============================================================
 
 // グローバル変数 ================================================
@@ -78,7 +79,7 @@ export const detailMovie = new Vue({
   },
   methods: {
     addInbox: function() {
-      console.log(this.work);
+      storage.setStorage();
     }
   },
 });
