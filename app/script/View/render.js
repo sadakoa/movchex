@@ -37,8 +37,9 @@ export const inboxLists = new Vue({
     search: function() {
       window.location.href = 'search.html';
     },
-    removeItem: function(event) {
+    removeItem: function(index) {
       event.preventDefault();
+      this.works.splice(index, 1);
     }
   },
 });
