@@ -6,7 +6,11 @@
  * seekIdMovies - ストレージデータにアクセス先の作品idがあるかチェックする
  */
 export function seekIdMovies(aId, aData) {
+  let storageIdData;
   for (let i=0; i < aData.length; i++) {
-    console.log('hello');
+    storageIdData = aData[i].id;
+    if (storageIdData === aId) {
+      console.info(`${storageIdData}が一致したのでボタンのステータスを変更する`);
+    }
   }
 }

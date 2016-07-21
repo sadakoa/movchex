@@ -48,6 +48,8 @@ export function urlDispatcher() {
     if (inboxArray == null) {
       console.log('Not a data :)');
     } else {
+      // アクセスしたページのパラメータとストレージの中にあるidが
+      // 一致するか解析
       check.seekIdMovies(urlPair, inboxArray);
     }
 
