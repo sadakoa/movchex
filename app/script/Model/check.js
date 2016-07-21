@@ -24,11 +24,15 @@ export function seekIdMovies(aId, aData) {
 
 export function hasStorageData() {
   let storageData =  storage.getStorage();
+  // データが無い場合の処理
   if (storageData == null) {
     console.log('データ無し');
     let text = '<img src="images/icon/popcorn.svg" alt="ポップコーン" class="p-empty-message__image"><p class="p-empty-message__text">これから観る予定の映画を<br>チェックしよう:)</p>';
     render.inboxLists.$set('text', text);
-  } else {
+  }
+  // データがある場合の処理
+  else {
     console.log('データ有り');
+    render.inboxLists.$set('works', storageData);
   }
 }

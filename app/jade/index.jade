@@ -19,17 +19,13 @@ block content
     .l-main#inbox-main
       .p-empty-message(v-html='text' v-cloak)
 
-      //- ul.p-inbox-list#inbox-list
-      //-   li.p-inbox-list__item.p-inbox-movie
-      //-     img.p-check-button#checkButton(src='images/button/check-button.png' alt='チェック' width='40')
-      //-     img.p-inbox-movie__image#movie-image(src='images/sample01.png' alt='作品')
-      //-     .p-inbox-movie__info
-      //-       h2.p-inbox-movie__info__title#movie-title
-      //-         | ファイディング・ニモ
-      //-       p.p-inbox-movie__info__sub
-      //-         | Added to :
-      //-         span.p-inbox-movie__info__sub--data#added-data
-      //-           | 2016.07.12
+      ul.p-inbox-list#inbox-list
+        li.p-inbox-list__item.p-inbox-movie(v-for='work in works' v-cloak)
+          img.p-check-button#checkButton(src='images/button/check-button.png' alt='チェック' width='40')
+          img.p-inbox-movie__image#movie-image(v-if='work.backdrop_path !== null' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path")
+          .p-inbox-movie__info
+            h2.p-inbox-movie__info__title#movie-title
+              | {{ work.original_title }}
       
       img.p-add-button#add-button(v-on:click='search' src='images/button/add-button.png' alt='追加' width='50')
       
