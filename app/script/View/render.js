@@ -13,7 +13,14 @@ let genreArray = []; // ジャンル用の配列
 let genreLength; // ジャンル用の配列個数
 let releaseDate; // リリース情報を格納する変数
 let sliceDate; // リリース情報を切り出した文字を格納する変数
-let inboxArray = []; // ストレージデータを登録するための配列
+let inboxArray = storage.getStorage(); // ストレージデータの配列
+// =============================================================
+
+// 初期化
+if (inboxArray == null) {
+  inboxArray = [];
+}
+
 // =============================================================
 
 /**
@@ -124,7 +131,6 @@ export function showDetailMovie(aData) {
 }
 
 // =============================================================
-
 
 /**
  * showRandomPopularMovies - 人気映画を上位3件のみ出力する関数
