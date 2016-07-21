@@ -110,5 +110,10 @@ export function showDetailMovie(aData) {
 // =============================================================
 
 export function showRandomPopularMovies(aData) {
-  console.log(aData);
+  let randomPopularArray = [];
+  // ページの上位3件のみ取得する
+  for(let i=0; i < 3; i++) {
+    randomPopularArray.push(aData[i]);
+  }
+  console.log(randomPopularArray);
 }
