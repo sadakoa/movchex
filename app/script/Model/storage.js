@@ -11,8 +11,8 @@ import store from 'store';
  *
  * @return {type}  description
  */
-export function setStorage() {
-  store.set('name', 'john');
+export function setStorage(aData) {
+  store.set('inbox', aData);
 }
 
 // =============================================================

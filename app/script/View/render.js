@@ -13,6 +13,7 @@ let genreArray = []; // ジャンル用の配列
 let genreLength; // ジャンル用の配列個数
 let releaseDate; // リリース情報を格納する変数
 let sliceDate; // リリース情報を切り出した文字を格納する変数
+let inboxArray = []; // ストレージデータを登録するための配列
 // =============================================================
 
 /**
@@ -71,6 +72,7 @@ export const detailMovie = new Vue({
   el: '#work-main',
   data: {
     work: {
+      original_title: null,
       poster_path: null,
       backdrop_path: null,
     },
@@ -79,7 +81,13 @@ export const detailMovie = new Vue({
   },
   methods: {
     addInbox: function() {
-      storage.setStorage();
+      let data = this.work;
+      // 視聴ステータスを追加 true - inboxに追加してある / false - 追加していない
+      data['pushStatus'] = true;
+      // 配列に追加
+      inboxArray.push(data);
+      // ブラウザストレージに登録
+      storage.setStorage(inboxArray);
     }
   },
 });
