@@ -17,13 +17,14 @@ export function setStorage(aData) {
 
 // =============================================================
 
-
 /**
  * getStorage - ストレージからデータを取得する
  *
  * @return {type}  description
  */
 export function getStorage() {
+  let inboxData = store.get('inbox');
+  return inboxData;
 }
 
 // =============================================================
