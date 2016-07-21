@@ -123,6 +123,6 @@ export function showRandomPopularMovies(aData) {
   for(let i=0; i < 3; i++) {
     randomPopularArray.push(aData[i]);
   }
-  console.log(randomPopularArray);
+  // detailMovieのdata -> popularWorksにJSONをセット
   detailMovie.$set('popularWorks', randomPopularArray);
 }
