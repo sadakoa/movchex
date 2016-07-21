@@ -78,7 +78,7 @@ export const detailMovie = new Vue({
   },
   methods: {
     addInbox: function() {
-      console.log('hello');
+      console.log(this.work);
     }
   },
 });
