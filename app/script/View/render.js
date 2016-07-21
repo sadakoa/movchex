@@ -38,9 +38,16 @@ export const inboxLists = new Vue({
       window.location.href = 'search.html';
     },
     removeItem: function(index) {
+      // aリンクのイベントを停止
       event.preventDefault();
+      // 配列から要素を削除
       this.works.splice(index, 1);
-    }
+
+      // ストレージを更新する
+      console.log(inboxArray);
+      inboxArray = inboxLists.$get('works');
+      storage.setStorage(inboxArray);
+    },
   },
 });
 
