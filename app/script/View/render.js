@@ -73,6 +73,8 @@ export const detailMovie = new Vue({
       poster_path: null,
       backdrop_path: null,
     },
+    popularWorks: '',
+    url: 'work.html',
   },
 });
 
@@ -116,4 +118,5 @@ export function showRandomPopularMovies(aData) {
     randomPopularArray.push(aData[i]);
   }
   console.log(randomPopularArray);
+  detailMovie.$set('popularWorks', randomPopularArray);
 }

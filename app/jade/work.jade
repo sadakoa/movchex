@@ -47,11 +47,11 @@ block content
 
         .p-movie-relation
           h3.p-movie-headline
-            | 同じジャンルの人気作品
+            | おすすめの作品
           ul.p-movie-relation__list.c-three-grid
-            li.p-movie-relation__list__item
-              a(href='#').p-movie-relation__list__item--anchor
-                img.p-movie-relation__list__item__image(src='images/sample02.png' alt='映画のジャケット')
+            li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak)
+              a(v-bind:href='url + "?" + work.id').p-movie-relation__list__item--anchor
+                img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
 
       .p-push
         button.c-button.p-push__button#push-button
