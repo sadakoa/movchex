@@ -36,8 +36,11 @@ export const inboxLists = new Vue({
   methods: {
     search: function() {
       window.location.href = 'search.html';
+    },
+    removeItem: function(event) {
+      event.preventDefault();
     }
-  }
+  },
 });
 
 // =============================================================
