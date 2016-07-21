@@ -26,14 +26,3 @@ export function getStorage() {
   let inboxData = store.get('inbox');
   return inboxData;
 }
-
-// =============================================================
-
-
-/**
- * removeStorage - ストレージからデータを削除する
- *
- * @return {type}  description
- */
-export function removeStorage() {
-}
