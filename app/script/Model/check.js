@@ -1,5 +1,9 @@
 // =============================================================
-// check.js - 検索 & 解析に関する処理を行う
+// check.js - 確認 & 検索 & 解析に関する処理を行う
+// =============================================================
+
+// 利用モジュール & パッケージ =====================================
+import * as storage from '../Model/storage';
 // =============================================================
 
 /**
@@ -12,5 +16,16 @@ export function seekIdMovies(aId, aData) {
     if (storageIdData === aId) {
       $('.p-push__button').addClass('is-addPush').text('追加済み');
     }
+  }
+}
+
+// =============================================================
+
+export function hasStorageData() {
+  let storageData =  storage.getStorage();
+  if (storageData == null) {
+    console.log('データ無し');
+  } else {
+    console.log('データ有り');
   }
 }

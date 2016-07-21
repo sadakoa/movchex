@@ -39,6 +39,8 @@ export const setRoutes = new Vue({
 export function urlDispatcher() {
   // .l-mainのID名
   let mainId = $('.l-main').attr('id');
+
+  // 作品詳細ページのみ行う処理
   if (mainId === 'work-main') {
     // URLのパラメータを変数に格納
     const urlPair = Number(location.search.substring(1).split('&'));
@@ -59,7 +61,12 @@ export function urlDispatcher() {
     // おすすめの作品に関する処理
     const randomNum = convert.showRandomNum();
     movie.getRandomPopularMovies(randomNum);
-  } else {
+  }
+  // inboxページのみ行う処理
+  else if (mainId === 'inbox-main') {
+    check.hasStorageData();
+  }
+  else {
     return;
   }
 }
