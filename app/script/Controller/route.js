@@ -25,8 +25,13 @@ export const setRoutes = new Vue({
       window.location.href = 'work.html';
     },
     backHistory: () => {
-      javascript:window.history.back(-1);
-      return false;
+      let ref = document.referrer;
+      if (ref === '') {
+        window.location.href= 'search.html';
+      } else {
+        javascript:window.history.back(-1);
+        return false;
+      }
     },
   },
 });
