@@ -75,3 +75,15 @@ export function urlDispatcher() {
     return;
   }
 }
+
+// =============================================================
+
+/**
+ * urlRedirect - 特定のページにアクセスされた場合のリダイレクト処理を行う
+ */
+export function urlRedirect() {
+  const URL = location.href;
+  if ( URL === 'http://localhost:3012/work.html' ) {
+      console.log('404ページを後で出す');
+  }
+}
