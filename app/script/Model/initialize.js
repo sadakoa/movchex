@@ -6,6 +6,7 @@
 import setEvent from '../Controller/setEvent';
 import * as send from '../Controller/send';
 import * as render from '../View/render';
+import * as check from '../Model/check';
 // =============================================================
 
 /**
@@ -17,6 +18,7 @@ export default function initialize() {
   render.inboxLists; // INBOXページの情報をレンダリングするVueインスタンス
   render.resultMovies; // 検索結果をレンダリングするVueインスタンス
   render.detailMovie;  // 作品情報をレンダリングするVueインスタンス
+  check.showStorageNum();
 }
 
 // =============================================================

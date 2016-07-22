@@ -36,3 +36,20 @@ export function hasStorageData() {
     render.inboxLists.$set('works', storageData);
   }
 }
+
+// =============================================================
+
+/**
+ * showStorageNum - INBOXのリストアイテムの個数を表示する関数
+ */
+export function showStorageNum() {
+  let storageData =  storage.getStorage();
+  if (storageData == '' || storageData == null) {
+    return;
+  }
+  else {
+    const num = storageData.length;
+    const inboxNumber = $('<p class="p-inbox-number"></p>').text(num);
+    $('.p-header-logo').append(inboxNumber);
+  }
+}
