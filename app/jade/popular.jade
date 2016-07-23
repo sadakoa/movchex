@@ -20,12 +20,41 @@ block content
       .p-popular-movie
         h2.p-popular-movie__title
           | 人気の映画
-        ul.p-popular-movie__list
+        ul.p-popular-movie__list.c-three-grid
           li.p-popular-movie__list__item
             a(href='#').p-popular-movie__list__item--anchor
               img.p-popular-movie__list__item__image(src='images/substitute.png')
-              h3.p-popular-movie__list__item__title
-                | 作品名
+
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+        
+        ul.p-popular-movie__page
+          li.p-popular-movie__page__item.is-prev
+            a.p-popular-movie__page__item--anchor(href='#')
+              | ＜ 前へ
+          li.p-popular-movie__page__item.is-next
+            a.p-popular-movie__page__item--anchor(href='#')
+              | 次へ ＞
+          
+          
+
               
 
       include layouts/_footer.jade
