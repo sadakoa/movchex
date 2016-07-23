@@ -78,8 +78,12 @@ export function urlDispatcher() {
     check.hasStorageData();
   }
   else if (mainId === 'popular-main') {
-    console.log('popular');
-    movie.getPopularMovies();
+    const urlPair = Number(location.search.substring(1).split('&'));
+    // パラメータがなかったらpage: 1から表示
+    if(urlPair == 0) {
+      const pageId = 1; // ページ番号
+      movie.getPopularMovies(pageId);
+    }
   }
   else {
     return;
