@@ -53,7 +53,7 @@ export const inboxLists = new Vue({
         title: this.works[index].original_title,
         image: this.works[index].poster_path,
        };
-      historyArray.push(historyData);
+      historyArray.unshift(historyData);
       storage.setHistoryStorage(historyArray);
 
       // 配列から要素を削除
