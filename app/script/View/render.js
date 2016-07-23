@@ -13,12 +13,18 @@ let genreArray = []; // ジャンル用の配列
 let genreLength; // ジャンル用の配列個数
 let releaseDate; // リリース情報を格納する変数
 let sliceDate; // リリース情報を切り出した文字を格納する変数
+let historyData; // チェックされたリスト要素を格納する変数
 let inboxArray = storage.getStorage(); // ストレージデータの配列
+let historyArray = storage.getHistoryStorage(); // 視聴履歴データの取得
 // =============================================================
 
 // もしストレージデータがない場合は初期化をする
 if (inboxArray == null) {
   inboxArray = [];
+}
+
+if (historyArray == null) {
+  historyArray = [];
 }
 
 // =============================================================
@@ -40,11 +46,19 @@ export const inboxLists = new Vue({
     removeItem: function(index) {
       // aリンクのイベントを停止
       event.preventDefault();
+
+      // 視聴履歴のデータオブジェクトを生成
+      historyData = {
+        id: this.works[index].id,
+        title: this.works[index].original_title,
+        image: this.works[index].poster_path,
+       };
+      historyArray.push(historyData);
+      storage.setHistoryStorage(historyArray);
+
       // 配列から要素を削除
       this.works.splice(index, 1);
-
-      // ストレージを更新する
-      console.log(inboxArray);
+      // INBOXのストレージを更新する
       inboxArray = inboxLists.$get('works');
       storage.setStorage(inboxArray);
     },
