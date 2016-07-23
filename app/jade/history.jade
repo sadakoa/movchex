@@ -1,0 +1,27 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = '視聴履歴 | MOVCHEX';
+  - bodyClass = 'history';
+
+block content
+  .app#app
+    header.l-header#header
+      a(v-on:click='inbox' href='index.html').p-header-logo
+        img.p-header-logo__image(src='images/icon/inbox.svg' alt='INBOX')
+      h1.p-page-title
+        | HISTORY
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#history-main
+          
+      include layouts/_footer.jade
+
+            
+        
+
+      
+      
