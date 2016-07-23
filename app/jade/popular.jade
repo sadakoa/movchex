@@ -21,30 +21,11 @@ block content
         h2.p-popular-movie__title
           | 人気の映画
         ul.p-popular-movie__list.c-three-grid
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-
-          li.p-popular-movie__list__item
-            a(href='#').p-popular-movie__list__item--anchor
-              img.p-popular-movie__list__item__image(src='images/substitute.png')
-        
+          li.p-popular-movie__list__item(v-for='work in works' v-cloak)
+            a(v-bind:href='url + "?" + work.id').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+              h3.p-popular-movie__list__item__title
+                | {{ work.original_title }}
         ul.p-popular-movie__page
           li.p-popular-movie__page__item.is-prev
             a.p-popular-movie__page__item--anchor(href='#')

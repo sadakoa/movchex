@@ -78,6 +78,7 @@ export function urlDispatcher() {
     check.hasStorageData();
   }
   else if (mainId === 'popular-main') {
+    console.log('popular');
     movie.getPopularMovies();
   }
   else {

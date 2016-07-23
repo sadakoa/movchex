@@ -196,9 +196,9 @@ export function showRandomPopularMovies(aData) {
  * 人気映画をレンダリングするVueインスタンス
  */
  export const popularMovies = new Vue({
-   el: 'p-popular-movie__list',
+   el: '#popular-main',
    data: {
-     works: array,
+     works: '',
      url: 'work.html',
    },
  });
@@ -206,5 +206,5 @@ export function showRandomPopularMovies(aData) {
 // =============================================================
 
 export function showPopularMovies(aData) {
-  console.info(aData);
+  popularMovies.$set('works', aData);
 }

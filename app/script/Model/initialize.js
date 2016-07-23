@@ -18,6 +18,7 @@ export default function initialize() {
   render.inboxLists; // INBOXページの情報をレンダリングするVueインスタンス
   render.resultMovies; // 検索結果をレンダリングするVueインスタンス
   render.detailMovie;  // 作品情報をレンダリングするVueインスタンス
+  render.popularMovies; // 人気映画をレンダリングするVueインスタンス
   check.showStorageNum();
 }
 
