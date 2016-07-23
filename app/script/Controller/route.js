@@ -24,6 +24,12 @@ export const setRoutes = new Vue({
     work: () => {
       window.location.href = 'work.html';
     },
+    popular: () => {
+      window.location.href = 'popular.html';
+    },
+    history: () => {
+      window.location.href = 'history.html';
+    },
     backHistory: () => {
       let ref = document.referrer;
       if (ref === '') {
