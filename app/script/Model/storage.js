@@ -47,3 +47,12 @@ export function getHistoryStorage() {
   let HistoryData = store.get('history');
   return HistoryData;
 }
+
+// =============================================================
+
+/**
+ * removeHistoryStorage - ストレージから視聴履歴データを削除
+ */
+export function removeHistoryStorage() {
+  let HistoryData = store.remove('history');
+}

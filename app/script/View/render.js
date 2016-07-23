@@ -265,6 +265,12 @@ export const historyMovies = new Vue({
     works: '',
     url: 'work.html',
   },
+  methods: {
+    removeHistoryData: function() {
+      storage.removeHistoryStorage();
+      historyMovies.$set('works', '');
+    },
+  },
 });
 
 // =============================================================
