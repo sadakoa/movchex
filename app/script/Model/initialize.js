@@ -19,6 +19,7 @@ export default function initialize() {
   render.resultMovies; // 検索結果をレンダリングするVueインスタンス
   render.detailMovie;  // 作品情報をレンダリングするVueインスタンス
   render.popularMovies; // 人気映画をレンダリングするVueインスタンス
+  render.historyMovies; // 視聴履歴をレンダリングするVueインスタンス
   check.showStorageNum();
 }
 

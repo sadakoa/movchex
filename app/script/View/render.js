@@ -242,6 +242,33 @@ export function showRandomPopularMovies(aData) {
 
 // =============================================================
 
+
+/**
+ * showPopularMovies - 人気映画を出力する関数
+ */
 export function showPopularMovies(aData) {
   popularMovies.$set('works', aData);
+}
+
+// =============================================================
+
+/**
+ * 視聴履歴をレンダリングするVueインスタンス
+ */
+export const historyMovies = new Vue({
+  el: '.p-history-movie',
+  data: {
+    works: '',
+    url: 'work.html',
+  },
+});
+
+// =============================================================
+
+
+/**
+ * showHistoryMovies - 視聴履歴の映画データを出力する関数
+ */
+export function showHistoryMovies(aData) {
+  historyMovies.$set('works', aData);
 }
