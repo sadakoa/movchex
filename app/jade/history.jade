@@ -21,16 +21,15 @@ block content
         h2.p-history-movie__title
           | 視聴履歴
         ul.p-history-list
-          li.p-history-list__item
-            a(href="#").p-history-list__item--anchor
-              img.p-history-list__item__image(src='http://image.tmdb.org/t/p/w300/cGOPbv9wA5gEejkUN892JrveARt.jpg')
+          li.p-history-list__item(v-for='work in works' v-cloak)
+            a(v-bind:href='url + "?" + work.id').p-history-list__item--anchor
+              img.p-history-list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.image")
             .p-history-list__item__info
               h3.p-history-list__item__info__title
-                | Batman v Superman: Dawn of Justice
+                | {{ work.title }}
               p.p-history-list__item__info__data
                 | 視聴日 : 2016.05.23
             
-          
       include layouts/_footer.jade
 
             

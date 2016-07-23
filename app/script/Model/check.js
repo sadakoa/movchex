@@ -26,14 +26,29 @@ export function hasStorageData() {
   let storageData =  storage.getStorage();
   // データが無い場合の処理
   if (storageData == '' || storageData == null) {
-    console.log('データ無し');
+    console.log('INBOXのデータ無し');
     let text = '<img src="images/icon/popcorn.svg" alt="ポップコーン" class="p-empty-message__image"><p class="p-empty-message__text">これから観る予定の映画を<br>チェックしよう:)</p>';
     render.inboxLists.$set('text', text);
   }
   // データがある場合の処理
   else {
-    console.log('データ有り');
+    console.log('INBOXのデータ有り');
     render.inboxLists.$set('works', storageData);
+  }
+}
+
+// =============================================================
+
+export function hasHistoryStorageData() {
+  let storageData =  storage.getHistoryStorage();
+  // データが無い場合の処理
+  if (storageData == '' || storageData == null) {
+    console.log('視聴履歴のデータ無し');
+  }
+  // データがある場合の処理
+  else {
+    console.log('視聴履歴のデータ有り');
+    render.historyMovies.$set('works', storageData);
   }
 }
 

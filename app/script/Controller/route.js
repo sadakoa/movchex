@@ -90,6 +90,9 @@ export function urlDispatcher() {
       movie.getPopularMovies(pageId);
     }
   }
+  else if (mainId === 'history-main') {
+    check.hasHistoryStorageData();
+  }
   else {
     return;
   }
