@@ -17,9 +17,16 @@ block content
       include layouts/_nav.jade
               
     .l-main#popular-main
-      .p-popular-movies
-        h2.p-search-result__title
+      .p-popular-movie
+        h2.p-popular-movie__title
           | 人気の映画
+        ul.p-popular-movie__list
+          li.p-popular-movie__list__item
+            a(href='#').p-popular-movie__list__item--anchor
+              img.p-popular-movie__list__item__image(src='images/substitute.png')
+              h3.p-popular-movie__list__item__title
+                | 作品名
+              
 
       include layouts/_footer.jade
 
