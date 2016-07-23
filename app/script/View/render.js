@@ -189,3 +189,22 @@ export function showRandomPopularMovies(aData) {
   // detailMovieのdata -> popularWorksにJSONをセット
   detailMovie.$set('popularWorks', randomPopularArray);
 }
+
+// =============================================================
+
+/**
+ * 人気映画をレンダリングするVueインスタンス
+ */
+ export const popularMovies = new Vue({
+   el: 'p-popular-movie__list',
+   data: {
+     works: array,
+     url: 'work.html',
+   },
+ });
+
+// =============================================================
+
+export function showPopularMovies(aData) {
+  console.info(aData);
+}

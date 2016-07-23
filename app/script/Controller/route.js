@@ -77,6 +77,9 @@ export function urlDispatcher() {
   else if (mainId === 'inbox-main') {
     check.hasStorageData();
   }
+  else if (mainId === 'popular-main') {
+    movie.getPopularMovies();
+  }
   else {
     return;
   }

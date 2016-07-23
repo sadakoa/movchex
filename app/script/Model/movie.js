@@ -14,6 +14,22 @@ let popularData; // 人気作品の映画
 // =============================================================
 
 /**
+ * getPopularMovies - 人気映画をAPIから取得、データを返す関数
+ */
+export function getPopularMovies(pageId) {
+  theMovieDb.discover.getMovies({page: pageId}, successCB, errorCB);
+  function successCB(data) {
+    popularData = JSON.parse(data).results;
+    render.showPopularMovies(popularData);
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}
+
+// =============================================================
+
+/**
  * getRandomPopularMovies - 人気映画をAPIから取得、データを返す関数
  */
 export function getRandomPopularMovies(pageId) {
