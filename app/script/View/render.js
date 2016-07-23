@@ -211,6 +211,10 @@ export function showRandomPopularMovies(aData) {
      },
      showNext: function() {
       let urlPair = Number(location.search.substring(1).split('&'));
+      // もしパラメータが無かったらボタンを押した時にpage2から表示
+      if (urlPair == 0) {
+        urlPair = urlPair + 1;
+      }
       let x = urlPair + 1;
       popularMovies.$set('nextLink', 'popular.html' + '?' + x);
      }
