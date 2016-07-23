@@ -5,6 +5,7 @@
 // 利用モジュール & パッケージ =====================================
 import * as convert from '../Model/convert';
 import * as storage from '../Model/storage';
+import moment from 'moment';
 // =============================================================
 
 // グローバル変数 ================================================
@@ -14,6 +15,7 @@ let genreLength; // ジャンル用の配列個数
 let releaseDate; // リリース情報を格納する変数
 let sliceDate; // リリース情報を切り出した文字を格納する変数
 let historyData; // チェックされたリスト要素を格納する変数
+let checkDate; // INBOXからチェックした時間
 let inboxArray = storage.getStorage(); // ストレージデータの配列
 let historyArray = storage.getHistoryStorage(); // 視聴履歴データの取得
 // =============================================================
@@ -48,10 +50,12 @@ export const inboxLists = new Vue({
       event.preventDefault();
 
       // 視聴履歴のデータオブジェクトを生成
+      checkDate = moment().format('YYYY.MM.DD');
       historyData = {
         id: this.works[index].id,
         title: this.works[index].original_title,
         image: this.works[index].poster_path,
+        date: checkDate,
        };
       historyArray.unshift(historyData);
       storage.setHistoryStorage(historyArray);
