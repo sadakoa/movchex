@@ -204,8 +204,13 @@ export function showRandomPopularMovies(aData) {
      nextLink: 'popular.html',
    },
    methods: {
-     showPrev: function() {
+     showPrev: function(e) {
        let urlPair = Number(location.search.substring(1).split('&'));
+      //  もしページ番号が1かパラメータが0だったらaリンクを止める
+       if (urlPair == 0 || urlPair == 1) {
+         e.preventDefault();
+         return;
+       }
        let y = urlPair - 1;
        popularMovies.$set('prevLink', 'popular.html' + '?' + y);
      },
