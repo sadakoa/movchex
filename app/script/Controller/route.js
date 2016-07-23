@@ -83,6 +83,10 @@ export function urlDispatcher() {
     if(urlPair == 0) {
       const pageId = 1; // ページ番号
       movie.getPopularMovies(pageId);
+    } else {
+      // それ以外はパラメータの数値でAPIを叩く
+      const pageId = urlPair;
+      movie.getPopularMovies(pageId);
     }
   }
   else {
