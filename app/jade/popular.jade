@@ -1,0 +1,30 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = '人気映画 | MOVCHEX';
+  - bodyClass = 'popular';
+
+block content
+  .app#app
+    header.l-header#header
+      a(v-on:click='inbox' href='index.html').p-header-logo
+        img.p-header-logo__image(src='images/icon/inbox.svg' alt='INBOX')
+      h1.p-page-title
+        | POPULAR
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#popular-main
+      .p-popular-movies
+        h2.p-search-result__title
+          | 人気映画一覧
+
+      include layouts/_footer.jade
+
+            
+        
+
+      
+      
