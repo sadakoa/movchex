@@ -200,7 +200,21 @@ export function showRandomPopularMovies(aData) {
    data: {
      works: '',
      url: 'work.html',
+     prevLink: 'popular.html',
+     nextLink: 'popular.html',
    },
+   methods: {
+     showPrev: function() {
+       let urlPair = Number(location.search.substring(1).split('&'));
+       let y = urlPair - 1;
+       popularMovies.$set('prevLink', 'popular.html' + '?' + y);
+     },
+     showNext: function() {
+      let urlPair = Number(location.search.substring(1).split('&'));
+      let x = urlPair + 1;
+      popularMovies.$set('nextLink', 'popular.html' + '?' + x);
+     }
+   }
  });
 
 // =============================================================
