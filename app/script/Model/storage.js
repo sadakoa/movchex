@@ -7,7 +7,7 @@ import store from 'store';
 // =============================================================
 
 /**
- * setStorage - ストレージにデータを登録する
+ * setStorage - ストレージにINBOX内のデータを登録する
  *
  * @return {type}  description
  */
@@ -25,4 +25,25 @@ export function setStorage(aData) {
 export function getStorage() {
   let inboxData = store.get('inbox');
   return inboxData;
+}
+
+// =============================================================
+
+/**
+ * setHistoryStorage - ストレージに視聴履歴のデータを保存する
+ *
+ */
+export function setHistoryStorage(aData) {
+  store.set('history', aData);
+}
+
+// =============================================================
+
+
+/**
+ * getHistoryStorage - ストレージから視聴履歴データを取得する
+ */
+export function getHistoryStorage() {
+  let HistoryData = store.get('history');
+  return HistoryData;
 }
