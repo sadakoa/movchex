@@ -29,6 +29,7 @@ export default function setEvent() {
 
   // ナビゲーション以外を閉じても閉じるようにする
   $(document).on(TOUCH, '.app-open', function(e) {
+    e.preventDefault();
     openNav();
   });
 }
