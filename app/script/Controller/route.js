@@ -80,8 +80,9 @@ export function urlDispatcher() {
   else if (mainId === 'popular-main') {
     const urlPair = Number(location.search.substring(1).split('&'));
     // パラメータがなかったらpage: 1から表示
-    if(urlPair == 0) {
+    if(urlPair == 0 || urlPair == 1) {
       const pageId = 1; // ページ番号
+      $('.is-prev').remove();
       movie.getPopularMovies(pageId);
     } else {
       // それ以外はパラメータの数値でAPIを叩く
