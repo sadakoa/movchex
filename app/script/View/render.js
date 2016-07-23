@@ -145,7 +145,7 @@ export const detailMovie = new Vue({
       // 視聴ステータスを追加 true - inboxに追加してある / false - 追加していない
       data['pushStatus'] = true;
       // 配列に追加
-      inboxArray.push(data);
+      inboxArray.unshift(data);
       // ブラウザストレージに登録
       storage.setStorage(inboxArray);
 
