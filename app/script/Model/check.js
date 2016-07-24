@@ -27,7 +27,7 @@ export function hasStorageData() {
   // データが無い場合の処理
   if (storageData == '' || storageData == null) {
     console.log('INBOXのデータ無し');
-    let text = '<img src="images/icon/popcorn.svg" alt="ポップコーン" class="p-empty-message__image"><p class="p-empty-message__text">これから観る予定の映画を<br>チェックしよう:)</p>';
+    let text = '<img src="images/icon/popcorn.svg" alt="ポップコーン" class="p-empty-message__image"><p class="p-empty-message__text">これから観る予定の映画を<br>チェックしよう:)</p><p class="p-onboard"><a href="about.html">MOVCHEXの使い方</a>';
     render.inboxLists.$set('text', text);
   }
   // データがある場合の処理
