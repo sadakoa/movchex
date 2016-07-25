@@ -30,7 +30,7 @@ block content
                 | {{ work.original_title }}
         
       .p-search-wrapper
-        form.p-search-wrapper__form(method='GET' action='/')
+        form.p-search-wrapper__form(method='GET' action='' onsubmit='return false;')
           input.p-search-wrapper__input(type='search' placeholder='映画のタイトル名で検索')
       
         

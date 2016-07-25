@@ -42,9 +42,6 @@ export const inboxLists = new Vue({
     url: 'work.html'
   },
   methods: {
-    search: function() {
-      window.location.href = 'search.html';
-    },
     removeItem: function(index) {
       // aリンクのイベントを停止
       event.preventDefault();
