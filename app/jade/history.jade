@@ -23,7 +23,8 @@ block content
         ul.p-history-list
           li.p-history-list__item(v-for='work in works' v-cloak)
             a(v-bind:href='url + "?" + work.id').p-history-list__item--anchor
-              img.p-history-list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.image")
+              img.p-history-list__item__image(v-if='work.image !== null' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.image")
+              img.p-history-list__item__image(v-else src='images/substitute.png' alt='画像はありません')
             .p-history-list__item__info
               h3.p-history-list__item__info__title
                 | {{ work.title }}
