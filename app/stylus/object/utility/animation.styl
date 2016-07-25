@@ -1,3 +1,5 @@
+// search.html ======================================================
+
 // 検索結果表示用のアニメーション
 .search-show-transition
   transition all 1s cubic-bezier(0.075, 0.82, 0.165, 1)
@@ -9,3 +11,19 @@
 
 .search-show-leave
   opacity 0
+
+// work.html ======================================================
+
+// 作品詳細背景画像のアニメーション
+.backdrop-transition
+  transition all 2s ease-in-out
+  transform scale(1)
+.backdrop-enter
+  transform scale(1.1)
+
+// 作品詳細ポスターのアニメーション
+.poster-transition
+  transition all 200ms ease
+  transform scale(1)
+.poster-enter
+  transform scale(1.1)
