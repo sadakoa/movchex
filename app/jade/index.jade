@@ -29,7 +29,7 @@ block content
               h2.p-inbox-movie__info__title#movie-title
                 | {{ work.original_title }}
         
-      .p-search-wrapper#aaa(v-on:click='openSearchNav')
+      .p-search-wrapper(v-on:click='openSearchNav')
         form.p-search-wrapper__form(method='GET' action='' onsubmit='return false;')
           input.p-search-wrapper__input(v-model='keyword' v-on:enter='jumpSearch' type='search' placeholder='映画のタイトル名で検索')
           button(v-on:click='jumpSearch' type='submit')
