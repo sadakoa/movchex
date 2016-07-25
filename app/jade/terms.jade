@@ -1,0 +1,101 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = 'MOVCHEXについて | MOVCHEX';
+  - bodyClass = 'about';
+
+block content
+  .app#app
+    header.l-header#header
+      a(v-on:click='inbox').p-header-logo
+        img.p-header-logo__image(src='images/icon/inbox.svg' alt='INBOX')
+      h1.p-page-title
+        | TEARMS
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#terms-main
+      section.p-side-section
+        h2.p-side-section__title
+          | 利用規約
+        p.p-side-section__text
+          | この利用規約（以下，「本規約」といいます。）は、sadakoa(以下、「運営者」といいます。)が映画作品の視聴管理を目的とした「MOVCHEX」（以下，「本サービス」といいます。）の利用条件を定めるものです。ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第1条（適用）
+        p.p-side-section__text
+          | 本規約は，ユーザーと運営者との間の本サービスの利用に関わる一切の関係に適用されるものとします。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第2条（禁止事項）
+        p.p-side-section__text
+          | ユーザーは，本サービスの利用にあたり，以下の行為を禁止します。
+        p.p-side-section__text
+          | （1）法令または公序良俗に違反する行為
+        p.p-side-section__text
+          | （2）犯罪行為に関連する行為
+        p.p-side-section__text
+          | （3）運営者のサーバー等の機能を破壊したり，妨害したりする行為
+        p.p-side-section__text
+          | （4）運営者のサービスの運営を妨害するおそれのある行為
+        p.p-side-section__text
+          | （5）他のユーザーに関する個人情報等を収集または蓄積する行為
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第3条（本サービスの提供の停止等）
+        p.p-side-section__text
+          | 1.運営者は，以下のいずれかの事由があると判断した場合，ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。
+        p.p-side-section__text
+          |（1）本サービスにかかるシステムの点検または更新を行う場合
+        p.p-side-section__text
+          |（2）地震，落雷，火災，停電または天災などの不可抗力により，本サービスの提供が困難となった場合
+        p.p-side-section__text
+          |（3）コンピュータまたは通信回線等が事故により停止した場合
+        p.p-side-section__text
+          |（4）その他，運営者が本サービスの提供が困難と判断した場合
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第4条（サービス内容の変更等）
+        p.p-side-section__text
+          | 運営者は，ユーザーに通知することなく，本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし，これによってユーザーに生じた損害について一切の責任を負いません。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第5条（利用規約の変更）
+        p.p-side-section__text
+          | 運営者は，必要と判断した場合には，ユーザーに通知することなくいつでも本規約を変更することができるものとします。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第6条（権利義務の譲渡の禁止）
+        p.p-side-section__text
+          | ユーザーは，運営者の書面による事前の承諾なく，利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し，または担保に供することはできません。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第7条（準拠法・裁判管轄）
+        p.p-side-section__text
+          | 本規約の解釈にあたっては，日本法を準拠法とします。
+        p.p-side-section__text
+          | 本規約に起因、または関連する一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
+          
+          
+          
+
+    include layouts/_footer.jade
+
+
+
+
+        
+        
+          
+          
+
+      
