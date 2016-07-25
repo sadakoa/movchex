@@ -17,5 +17,45 @@ block content
       include layouts/_nav.jade
               
     .l-main#about-main
+      img.p-page-hero(src='images/about/about-bg.png' alt='MOVCHEX')
+      section.p-about-section
+        h2.p-about-section__title
+          | MOVCHEXとは
+        p.p-about-section__text
+          | MOVCHEXはあなたのムービーライフをより充実に過ごすための視聴管理TODOアプリです。映画のタイトルに関する検索や、いま巷で人気な映画などを、自分だけのインボックスに保存して管理することが出来ます。
+      section.p-about-section
+        h2.p-about-section__title
+          | 簡単! 3ステップで分かる使い方
+        
+        .p-about-section__step
+          img.p-about-section__step__image(src='images/about/step01.png' alt='検索画面')
+          h3.p-about-section__step__headline
+            | 1.映画のタイトル名を検索
+          p.p-about-section__step__text
+            | INBOXページにある右下の＋ボタン、またはサイドメニューのSEARCHから検索画面にアクセスし、観たい、気になっている映画のタイトル名を入力しましょう。
+          
+        .p-about-section__step
+          img.p-about-section__step__image(src='images/about/step02.png' alt='作品詳細画面')
+          h3.p-about-section__step__headline
+            | 1.映画をINBOXに追加する
+          p.p-about-section__step__text
+            | 検索結果に表示された作品から作品詳細画面へ、画面下部の追加するボタンからINBOXに映画を追加します。
+
+        .p-about-section__step
+          img.p-about-section__step__image(src='images/about/step03.png' alt='インボックス画面')
+          h3.p-about-section__step__headline
+            | 3.視聴したらチェックする
+          p.p-about-section__step__text
+            | 視聴した作品は各左上にあるチェックボタンを押してINBOXから消去します。今までに視聴した作品はサイドメニューのHISTORYから確認することも出来ます。
+        
+    include layouts/_footer.jade
+
+
+
+
+        
+        
+          
+          
 
       
