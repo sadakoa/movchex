@@ -92,6 +92,15 @@ export function urlDispatcher() {
   else if (mainId === 'history-main') {
     check.hasHistoryStorageData();
   }
+  else if (mainId === 'search-main') {
+    const urlPair = decodeURI(location.search.substring(1).split('&'));
+    if (urlPair == 0) {
+      return;
+    } else {
+      movie.getKeywordMovies(urlPair);
+      $('.p-search-form__input').val(urlPair);
+    }
+  }
   else {
     return;
   }
