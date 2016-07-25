@@ -59,7 +59,6 @@ export function urlDispatcher() {
 
     // ストレージデータが存在するならデータをチェックする処理を行う
     if (inboxArray == null) {
-      console.log('Not a data :)');
     } else {
       // アクセスしたページのパラメータとストレージの中にあるidが
       // 一致するか解析
@@ -105,7 +104,7 @@ export function urlDispatcher() {
  */
 export function urlRedirect() {
   const URL = location.href;
-  if ( URL === 'http://localhost:3012/work.html' ) {
-      console.log('404ページを後で出す');
+  if ( URL === 'http://movchex.com/work.html' ) {
+      return;
   }
 }
