@@ -1,8 +1,10 @@
-.expand-transition
-  transition all 1000ms ease 2000ms
-  height auto
-  opacity 1
+.search-show-transition
+  transition all .9s ease
+  transform scale(1)
 
-.expand-enter
-  height 0
+.search-show-enter
+  opacity 0
+  transform scale(0.7)
+
+.search-show-leave
   opacity 0
