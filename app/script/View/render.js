@@ -18,6 +18,8 @@ let historyData; // チェックされたリスト要素を格納する変数
 let checkDate; // INBOXからチェックした時間
 let inboxArray = storage.getStorage(); // ストレージデータの配列
 let historyArray = storage.getHistoryStorage(); // 視聴履歴データの取得
+const searchWrapper = $('.p-search-wrapper'); // 検索ボタン
+const searchInput = $('.p-search-wrapper__input'); // 検索ボタンの入力欄
 // =============================================================
 
 // もしストレージデータがない場合は初期化をする
@@ -39,9 +41,19 @@ export const inboxLists = new Vue({
   data: {
     text: '',
     works: '',
-    url: 'work.html'
+    url: 'work.html',
+    keyword: '',
   },
   methods: {
+    openSearchNav: function() {
+        searchWrapper.toggleClass('focused');
+        searchInput.focus();
+    },
+    jumpSearch: function() {
+      if (this.keyword === '') { alert('検索キーワードを入力してください');return;}
+      let keyword = this.keyword.trim();
+      window.location.href = 'search.html?' + keyword;
+    },
     removeItem: function(index) {
       // aリンクのイベントを停止
       event.preventDefault();
