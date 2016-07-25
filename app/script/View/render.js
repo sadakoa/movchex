@@ -201,7 +201,7 @@ export function showDetailMovie(aData) {
 export function showRandomPopularMovies(aData) {
   let randomPopularArray = [];
   // ページの上位3件のみ取得する
-  for(let i=0; i < 3; i++) {
+  for(let i=0; i < 6; i++) {
     randomPopularArray.push(aData[i]);
   }
   // detailMovieのdata -> popularWorksにJSONをセット
