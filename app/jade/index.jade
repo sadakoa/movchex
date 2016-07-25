@@ -29,7 +29,9 @@ block content
               h2.p-inbox-movie__info__title#movie-title
                 | {{ work.original_title }}
         
-      img.p-add-button#add-button(v-on:click='search' src='images/button/add-button.png' alt='追加' width='50')
+      //- img.p-add-button#add-button(v-on:click='search' src='images/button/add-button.png' alt='追加' width='50')
+      .p-search-wrapper.focused
+        input.p-search-wrapper__input(type='search' placeholder='映画タイトルで検索')
       
         
           
