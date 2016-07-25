@@ -1,0 +1,85 @@
+extends layouts/_layout.jade
+
+block append init
+  - pageTitle = 'プライバシーポリシー | MOVCHEX';
+  - bodyClass = 'privacy';
+
+block content
+  .app#app
+    header.l-header#header
+      a(v-on:click='inbox').p-header-logo
+        img.p-header-logo__image(src='images/icon/inbox.svg' alt='INBOX')
+      h1.p-page-title
+        | PRIVACY
+      a.c-nav-button#nav-button
+        span.c-nav-button__line
+        span.c-nav-button__line
+      include layouts/_nav.jade
+              
+    .l-main#terms-main
+      section.p-side-section
+        h2.p-side-section__title
+          | プライバシーポリシー
+        p.p-side-section__text
+          | sadakoa（以下，「運営者」といいます。）は，映画作品の視聴管理を目的とした「MOVCHEX（以下,「本サービス」といいます。）におけるプライバシー情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第1条（プライバシー情報）
+        p.p-side-section__text
+          | 1.プライバシー情報のうち「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報を指します。
+      section.p-side-section
+        h2.p-side-section__title
+          | 第2条（プライバシー情報の収集方法）
+        p.p-side-section__text
+          | 運営者は，ユーザーが利用登録をする際にSNSアカウントやメールアドレス等を尋ねることがあります。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第3条（個人情報を収集・利用する目的）
+        p.p-side-section__text
+          | 1.本サービスに関する登録の受付など、サービスの提供、維持、゙改善のため
+        p.p-side-section__text
+          | 2.その他の利用目的に付随する利用目的のため
+
+      section.p-side-section
+        h2.p-side-section__title
+          | 第4条（個人情報の訂正および削除・停止）
+        p.p-side-section__text
+          | 1.ユーザーは，運営者の保有する自己の個人情報が誤った情報である場合には，運営者が定める手続きにより，運営者に対して個人情報の訂正または削除を請求することができます。
+        p.p-side-section__text
+          | 2.運営者は，ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正または削除を行い，これをユーザーに通知します。
+        p.p-side-section__text
+          | 3.運営者は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行い，その結果に基づき，個人情報の利用停止等を行い，その旨本人に通知します。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第5条（プライバシーポリシーの変更）
+        p.p-side-section__text
+          | 1.本ポリシーの内容は，ユーザーに通知することなく，変更することができるものとします。
+        p.p-side-section__text
+          | 2.運営者が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。
+          
+      section.p-side-section
+        h2.p-side-section__title
+          | 第6条（お問い合わせ窓口）
+        p.p-side-section__text
+          | 本ポリシーに関するお問い合わせは，下記の窓口までお願いいたします。
+        p.p-side-section__text
+          | 運営者名 : sadakoa
+          br
+          | メールアドレス : sadako0215@gmail.com
+          
+        
+
+    include layouts/_footer.jade
+
+
+
+
+        
+        
+          
+          
+
+      
