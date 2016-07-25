@@ -9,6 +9,8 @@ import openNav from '../View/navigation'; // ナビゲーションに関係す�
 // グローバル変数 ================================================
 const nav = $('#header-nav'); // スライドナビ
 const navButton = $('#nav-button'); // ハンバーガーボタン
+const searchWrapper = $('.p-search-wrapper'); // 検索ボタン
+const searchInput = $('.p-search-wrapper__input'); // 検索ボタンの入力欄
 // デバイスに応じてタッチイベントを判定する処理
 const TOUCH = ('ontouchstart' in document) ? 'touchstart' : 'click';
 // =============================================================
@@ -32,6 +34,18 @@ export default function setEvent() {
     e.preventDefault();
     openNav();
   });
+
+  // 検索ボタンの開閉
+  searchWrapper.on(TOUCH, function(e) {
+    e.preventDefault();
+    openSearchNav();
+  });
 }
 
 // =============================================================
+
+// 検索ナビボタンを開閉する関数
+function openSearchNav() {
+  searchWrapper.toggleClass('focused');
+  searchInput.focus();
+}
