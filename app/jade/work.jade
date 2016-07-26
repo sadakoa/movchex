@@ -49,7 +49,7 @@ block content
           h3.p-movie-headline
             | おすすめの作品
           ul.p-movie-relation__list.c-three-grid
-            li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak)
+            li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak transition='relation' stagger='100')
               a(v-bind:href='url + "?" + work.id').p-movie-relation__list__item--anchor
                 img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
 
