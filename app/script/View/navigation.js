@@ -6,6 +6,7 @@
 const navButton = $('#nav-button');
 const nav = $('#header-nav');
 const app = $('#app');
+const main = $('.l-main');
 let flag = false;
 let openBg = $('<div class="open-bg"></div>');
 // =============================================================
@@ -27,6 +28,8 @@ export default function openNav() {
     });
     // 背景を生成
     app.addClass('app-open');
+    main.addClass('main-open');
+
     flag = true;
   }
   else {
@@ -34,6 +37,7 @@ export default function openNav() {
     $(window).off('.noScroll');
     // 背景を削除
     app.removeClass('app-open');
+    main.removeClass('main-open');
     flag = false;
   }
 }
