@@ -20,29 +20,29 @@ block content
       .p-movie-detail(v-cloak)
 
         .p-movie-backdrop
-          img.p-movie-backdrop__image(v-if='work.backdrop_path' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path " )
+          img.p-movie-backdrop__image(v-if='work.backdrop_path' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path " transition='backdrop')
           img.p-movie-backdrop__image(v-else src='images/load/backdrop.png' )
             
           a(v-bind:href='work.homepage' target='_brank')
             img.p-movie-backdrop__site-link(src='images/button/link-button.png' alt='公式サイトへ飛ぶ' width='50')
 
         .p-movie-info
-          img.p-movie-info__image(v-if='work.poster_path' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+          img.p-movie-info__image(v-if='work.poster_path' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path" transition='poster')
           img.p-movie-info__image(v-else src='images/load/poster.png' data-adaptive-background)
           .p-movie-info__block
-            h2.p-movie-info__block__title
+            h2.p-movie-info__block__title(v-show='work.original_title' transition='info')
               | {{ work.original_title }}
               span.p-movie-info__block__data
                 | ({{ work.release_date }})
-            p.p-movie-info__block__genre
+            p.p-movie-info__block__genre(v-show='work.genres' transition='info')
               | {{ work.genres }}
-            p.p-movie-info__block__rate
+            p.p-movie-info__block__rate(v-show='work.vote_average' transition='info')
               | {{ work.vote_average }}
 
         .p-movie-overview
           h3.p-movie-headline
             | 作品内容
-          p.p-movie-overview__text
+          p.p-movie-overview__text(v-show='work.overview' transition='overview')
             | {{ work.overview }}
 
         .p-movie-relation
