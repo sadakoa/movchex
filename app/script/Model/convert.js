@@ -75,8 +75,8 @@ export function changeBackground() {
   const adaptive_params = {
     selector: '.p-movie-info__image',
     parent: '#work-main',
-    normalizeTextColor: true,
-    normalizedTextColors: { dark: '#000', light: '#fff' },
+    // normalizeTextColor: true,
+    // normalizedTextColors: { dark: '#000', light: '#fff' },
     lumaClasses: { light: 'ab-light', dark: 'ab-dark' },
   };
   // adaptive-backgrounds.jsを実行
