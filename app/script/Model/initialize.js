@@ -21,6 +21,7 @@ export default function initialize() {
   render.popularMovies; // 人気映画をレンダリングするVueインスタンス
   render.historyMovies; // 視聴履歴をレンダリングするVueインスタンス
   check.showStorageNum();
+  $('.loading-bg').delay(200).fadeOut(500); // 作品詳細のローディング
 }
 
 // =============================================================

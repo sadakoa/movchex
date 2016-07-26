@@ -5,6 +5,7 @@ block append init
   - bodyClass = 'work';
 
 block content
+  .loading-bg
   .app#app
     header.l-header.l-work-header#header
       a(v-on:click='backHistory').p-header-back
@@ -49,7 +50,7 @@ block content
           h3.p-movie-headline
             | おすすめの作品
           ul.p-movie-relation__list.c-three-grid
-            li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak transition='relation' stagger='100')
+            li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak transition='relation' stagger='110')
               a(v-bind:href='url + "?" + work.id').p-movie-relation__list__item--anchor
                 img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
 
