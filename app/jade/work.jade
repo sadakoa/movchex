@@ -27,7 +27,7 @@ block content
           a(v-bind:href='work.homepage' target='_brank' v-if='work.homepage')
             img.p-movie-backdrop__site-link(src='images/button/link-button.png' alt='公式サイトへ飛ぶ' width='45')
               
-          a(href='#')
+          a(v-bind:href='youtubeUrl + "?v=" + trailerPair' target='_brank' v-if='trailerPair')
             img.p-movie-backdrop__trailer-link(src='images/button/play-button.png' alt='再生' width='45')
 
         .p-movie-info

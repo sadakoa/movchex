@@ -155,6 +155,8 @@ export const detailMovie = new Vue({
     url: 'work.html',
     buttonText: 'INBOXに追加する',
     addedText: '追加済み',
+    youtubeUrl: 'http://www.youtube.com/watch',
+    trailerPair: '',
   },
   methods: {
     addInbox: function() {
@@ -236,7 +238,7 @@ export function showRandomPopularMovies(aData) {
  * showTrailerMovies - YoutubeのトレイラーのURLを出力する関数
  */
 export function showTrailerMovies(aData) {
-  console.log(aData);
+  detailMovie.$set('trailerPair', aData);
 }
 
 // =============================================================
