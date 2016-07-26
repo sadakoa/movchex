@@ -9,6 +9,8 @@ block content
     header.l-header#header
       a(v-on:click='inbox').p-header-logo
         img.p-header-logo__image(src='images/icon/inbox.svg' alt='INBOX')
+        p.p-inbox-number(v-show='num' v-cloak)
+          | {{ num }}
       h1.p-page-title
         | INBOX
       a.c-nav-button#nav-button

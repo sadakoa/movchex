@@ -59,8 +59,7 @@ export function showStorageNum() {
     return;
   }
   else {
-    const num = storageData.length;
-    const inboxNumber = $('<p class="p-inbox-number"></p>').text(num);
-    $('.p-header-logo').append(inboxNumber);
+    const storageNum = storageData.length;
+    render.inboxNumber.$set('num', storageNum);
   }
 }

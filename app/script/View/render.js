@@ -74,7 +74,18 @@ export const inboxLists = new Vue({
       // INBOXのストレージを更新する
       inboxArray = inboxLists.$get('works');
       storage.setStorage(inboxArray);
+
+      // INBOXリストの個数を送信
+      inboxNumber.$set('num', inboxArray.length);
     },
+  },
+});
+
+// INBOXリストの個数
+export const inboxNumber = new Vue({
+  el: '.p-header-logo',
+  data: {
+    num: '',
   },
 });
 
