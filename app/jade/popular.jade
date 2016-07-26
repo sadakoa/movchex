@@ -21,7 +21,7 @@ block content
         h2.p-popular-movie__title
           | 人気の映画
         ul.p-popular-list.c-three-grid
-          li.p-popular-list__item(v-for='work in works' v-cloak)
+          li.p-popular-list__item(v-for='work in works' v-cloak transition='popularItem')
             a(v-bind:href='url + "?" + work.id').p-popular-list__item--anchor
               img.p-popular-list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
               h3.p-popular-list__item__title
