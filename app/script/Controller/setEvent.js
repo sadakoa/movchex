@@ -19,7 +19,7 @@ const TOUCH = ('ontouchstart' in document) ? 'touchstart' : 'click';
  * SetEvent - イベントリスナーを初期化する関数
  */
 export default function setEvent() {
-  navButton.on(TOUCH, function(e) {
+  navButton.on('click', function(e) {
     e.stopPropagation();
     openNav();
   });
