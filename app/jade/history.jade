@@ -21,7 +21,7 @@ block content
         h2.p-history-movie__title(v-on:click='removeHistoryData')
           | 視聴履歴を削除する
         ul.p-history-list
-          li.p-history-list__item(v-for='work in works' v-cloak)
+          li.p-history-list__item(v-for='work in works' v-cloak transition='historyItem' stagger='100')
             a(v-bind:href='url + "?" + work.id').p-history-list__item--anchor
               img.p-history-list__item__image(v-if='work.image !== null' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.image")
               img.p-history-list__item__image(v-else src='images/substitute.png' alt='画像はありません')
