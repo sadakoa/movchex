@@ -178,6 +178,7 @@ export const detailMovie = new Vue({
  * @param  {JSON} aData JSONデータ
  */
 export function showDetailMovie(aData) {
+  $("title").text(`${aData.original_title} | MOVCHEX`);
   // リリース情報を(20XX)にするように変換
   releaseDate = aData.release_date;
   sliceDate = convert.sliceReleaseDate(releaseDate);
