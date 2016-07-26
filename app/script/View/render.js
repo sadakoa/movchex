@@ -297,7 +297,6 @@ export const historyMovies = new Vue({
 
 // =============================================================
 
-
 /**
  * showHistoryMovies - 視聴履歴の映画データを出力する関数
  */

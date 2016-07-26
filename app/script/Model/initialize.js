@@ -20,6 +20,7 @@ export default function initialize() {
   render.detailMovie;  // 作品情報をレンダリングするVueインスタンス
   render.popularMovies; // 人気映画をレンダリングするVueインスタンス
   render.historyMovies; // 視聴履歴をレンダリングするVueインスタンス
+  render.inboxNumber; // INBOXのリスト個数をレンダリングするVueインスタンス
   check.showStorageNum();
   $('.loading-bg').delay(500).fadeOut(500); // 作品詳細のローディング
 }
