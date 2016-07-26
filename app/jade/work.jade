@@ -24,7 +24,7 @@ block content
           img.p-movie-backdrop__image(v-if='work.backdrop_path' v-bind:src=" 'http://image.tmdb.org/t/p/w500' + work.backdrop_path " transition='backdrop')
           img.p-movie-backdrop__image(v-else src='images/load/backdrop.png' )
             
-          a(v-bind:href='work.homepage' target='_brank')
+          a(v-bind:href='work.homepage' target='_brank' v-if='work.homepage')
             img.p-movie-backdrop__site-link(src='images/button/link-button.png' alt='公式サイトへ飛ぶ' width='50')
 
         .p-movie-info
