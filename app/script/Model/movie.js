@@ -80,3 +80,25 @@ export function getIdMovie(aId) {
     console.log('Error Callback');
   }
 }
+
+// =============================================================
+
+/**
+ * getIdMovies - idに紐づく映画情報をAPIから取得する関数
+ *
+ * @param  {type} aId 映画作品のID名
+ */
+export function getTrailerMovie(aId) {
+  theMovieDb.movies.getTrailers({"id": aId}, successCB, errorCB)
+  function successCB(data) {
+    let trailerLink = JSON.parse(data).youtube;
+    // Youtubeでトレイラーが無い場合はここで処理を終了
+    if (trailerLink == '') {
+      return;
+    }
+    render.showTrailerMovies(trailerLink[0].source);
+  }
+  function errorCB(data) {
+    console.log('Error Callback');
+  }
+}

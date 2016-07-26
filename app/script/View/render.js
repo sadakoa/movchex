@@ -233,6 +233,15 @@ export function showRandomPopularMovies(aData) {
 // =============================================================
 
 /**
+ * showTrailerMovies - YoutubeのトレイラーのURLを出力する関数
+ */
+export function showTrailerMovies(aData) {
+  console.log(aData);
+}
+
+// =============================================================
+
+/**
  * 人気映画をレンダリングするVueインスタンス
  */
  export const popularMovies = new Vue({
@@ -303,3 +312,5 @@ export const historyMovies = new Vue({
 export function showHistoryMovies(aData) {
   historyMovies.$set('works', aData);
 }
+
+// =============================================================

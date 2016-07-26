@@ -71,6 +71,9 @@ export function urlDispatcher() {
     // おすすめの作品に関する処理
     const randomNum = convert.showRandomNum();
     movie.getRandomPopularMovies(randomNum);
+
+    // Youtubeの再生リンク
+    movie.getTrailerMovie(urlPair);
   }
   // inboxページのみ行う処理
   else if (mainId === 'inbox-main') {
