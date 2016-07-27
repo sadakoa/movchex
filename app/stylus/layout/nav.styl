@@ -2,8 +2,8 @@
 .p-header-nav
   position absolute
   top 0
-  // right 0
-  right -20px
+  right 0
+  // right -20px
   overflow hidden
   pointer-events none
   will-change none
@@ -18,8 +18,8 @@
 .p-header-nav.open
   will-change transform
   pointer-events auto
-  // transform translateX(0%)
-  transform: skewX(-5deg) translate3d(0, 0, 0)
+  transform translateX(0%)
+  // transform: skewX(-5deg) translate3d(0, 0, 0)
   backface-visibility hidden
   .p-header-nav__list__item
     will-change transform
@@ -39,7 +39,6 @@
 .p-header-nav__logo
   display block
   margin 0 auto 30px
-  transform translateX(-17px)
 
 // ナビリスト
 .p-header-nav__list
