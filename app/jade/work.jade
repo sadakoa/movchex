@@ -56,7 +56,8 @@ block content
           ul.p-movie-relation__list.c-three-grid
             li.p-movie-relation__list__item(v-for='work in popularWorks' v-cloak transition='relation' stagger='110')
               a(v-bind:href='url + "?" + work.id').p-movie-relation__list__item--anchor
-                img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+                img.p-movie-relation__list__item__image(v-if='work.poster_path' v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
+                img.p-movie-relation__list__item__image(v-else src='images/substitute.png' alt='画像はありません')
 
         .p-movie-search
           h3.p-movie-headline
