@@ -163,7 +163,7 @@ export const detailMovie = new Vue({
 
       // もし追加ボタンに以下のクラスがついていたら処理を止める
       if ($('.p-push__button').hasClass('is-addPush')) {
-        alert('INBOXに追加されています')
+        alert('INBOXに追加済です');
         return;
       }
 
