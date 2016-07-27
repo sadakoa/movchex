@@ -175,7 +175,7 @@ export const detailMovie = new Vue({
         // 配列に追加
         inboxArray.unshift(data);
         // ブラウザストレージに登録
-        // storage.setStorage(inboxArray);
+        storage.setStorage(inboxArray);
 
         // テキスト文言とスタイルを変更
         this.$els.pushButton.textContent = this.addedText;

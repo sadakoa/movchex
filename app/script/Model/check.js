@@ -15,7 +15,7 @@ export function seekIdMovies(aId, aData) {
   for (let i=0; i < aData.length; i++) {
     storageIdData = aData[i].id;
     if (storageIdData === aId) {
-      $('.p-push__button').addClass('is-addPush').text('追加済み');
+      $('.p-push__button').addClass('is-addPush').text('INBOXを表示する');
     }
   }
 }
