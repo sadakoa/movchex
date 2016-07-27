@@ -58,6 +58,14 @@ block content
               a(v-bind:href='url + "?" + work.id').p-movie-relation__list__item--anchor
                 img.p-movie-relation__list__item__image(v-bind:src=" 'http://image.tmdb.org/t/p/w300' + work.poster_path")
 
+        .p-movie-search
+          h3.p-movie-headline
+            | 気になる映画を検索
+          form.p-search-form(method='GET' action='' onsubmit='return false;')
+            input.p-search-form__input(v-model='keyword' v-on:enter='jumpSearch' type='search' placeholder='映画タイトルのキーワードで検索')
+            button.c-button.p-search-form__button(v-on:click='jumpSearch' type='submit')
+              | 検索
+
       .p-push
         button.c-button.p-push__button(v-el:push-button v-on:click='addInbox' v-cloak)
           | {{ buttonText }}

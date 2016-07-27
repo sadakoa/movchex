@@ -179,7 +179,12 @@ export const detailMovie = new Vue({
       // テキスト文言とスタイルを変更
       this.$els.pushButton.textContent = this.addedText;
       this.$els.pushButton.classList.add('is-addPush', 'push-anime');
-    }
+    },
+    jumpSearch: function() {
+      if (this.keyword === '') { alert('検索キーワードを入力してください');return;}
+      let keyword = this.keyword.trim();
+      window.location.href = 'search.html?' + keyword;
+    },
   },
 });
 
