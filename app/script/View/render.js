@@ -163,7 +163,7 @@ export const detailMovie = new Vue({
 
       // INBOXに追加後なら下記の処理を実行
       if ($('.p-push__button').hasClass('is-addPush')) {
-        window.location.href = '/';
+        window.location.href = 'index.html';
         return;
       }
       // INBOXに追加前なら下記の処理を実行
