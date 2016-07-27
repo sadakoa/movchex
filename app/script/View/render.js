@@ -154,31 +154,33 @@ export const detailMovie = new Vue({
     popularWorks: '',
     url: 'work.html',
     buttonText: 'INBOXに追加する',
-    addedText: '追加済み',
+    addedText: 'INBOXを表示する',
     youtubeUrl: 'http://www.youtube.com/watch',
     trailerPair: '',
   },
   methods: {
     addInbox: function() {
 
-      // もし追加ボタンに以下のクラスがついていたら処理を止める
+      // INBOXに追加後なら下記の処理を実行
       if ($('.p-push__button').hasClass('is-addPush')) {
-        alert('INBOXに追加済です');
+        window.location.href = '/';
         return;
       }
+      // INBOXに追加前なら下記の処理を実行
+      else {
+        // INBOXに追加する処理
+        let data = this.work;
+        // 視聴ステータスを追加 true - inboxに追加してある / false - 追加していない
+        data['pushStatus'] = true;
+        // 配列に追加
+        inboxArray.unshift(data);
+        // ブラウザストレージに登録
+        // storage.setStorage(inboxArray);
 
-      // INBOXに追加する処理
-      let data = this.work;
-      // 視聴ステータスを追加 true - inboxに追加してある / false - 追加していない
-      data['pushStatus'] = true;
-      // 配列に追加
-      inboxArray.unshift(data);
-      // ブラウザストレージに登録
-      storage.setStorage(inboxArray);
-
-      // テキスト文言とスタイルを変更
-      this.$els.pushButton.textContent = this.addedText;
-      this.$els.pushButton.classList.add('is-addPush', 'push-anime');
+        // テキスト文言とスタイルを変更
+        this.$els.pushButton.textContent = this.addedText;
+        this.$els.pushButton.classList.add('is-addPush', 'push-anime');
+      }
     },
     jumpSearch: function() {
       if (this.keyword === '') { alert('検索キーワードを入力してください');return;}
