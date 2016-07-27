@@ -3,7 +3,6 @@
   position absolute
   top 0
   right 0
-  // right -20px
   overflow hidden
   pointer-events none
   will-change none
@@ -12,14 +11,14 @@
   padding 60px 20px 30px 20px
   transform translateX(100%)
   transition all 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-  background url('../images/background/nav-bg.png') center /cover no-repeat
+  // background url('../images/background/nav-bg.png') center /cover no-repeat
+  background rgba(0, 0, 0, 0.9)
 
 // サイドナビが開いた時のスタイル & アニメーション
 .p-header-nav.open
   will-change transform
   pointer-events auto
   transform translateX(0%)
-  // transform: skewX(-5deg) translate3d(0, 0, 0)
   backface-visibility hidden
   .p-header-nav__list__item
     will-change transform
@@ -42,7 +41,7 @@
 
 // ナビリスト
 .p-header-nav__list
-  border-top 1px solid #6FAFC2
+  border-top 1px solid rgba(255, 255, 255, 0.2)
   padding 30px 10px 0 10px
   &__item
     transition all 800ms cubic-bezier(0.000, 0.995, 0.990, 1.000)
