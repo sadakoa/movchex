@@ -117,10 +117,27 @@
 
 // pushボタンのアニメーション
 .push-anime
-  animation pushAnime .6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  width 50px
+  font-size 0
+  border-width 2px
+  border-color white
+  border-left-color green
+  animation pushAnime 1s linear infinite
 
 @keyframes pushAnime
   0%
-    transform scale(0.4)
+    transform: rotate(0deg)
   100%
-    transform scale(1)
+    transform: rotate(360deg)
+
+.validate
+  transition all 200ms ease-in-out
+  &:before
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    transform: translate(-50%, -50%)
+    width 20px
+    height 20px
+    background url('../images/icon/added.svg') center /cover no-repeat

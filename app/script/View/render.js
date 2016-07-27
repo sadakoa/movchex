@@ -154,7 +154,7 @@ export const detailMovie = new Vue({
     popularWorks: '',
     url: 'work.html',
     buttonText: 'INBOXに追加する',
-    addedText: 'INBOXを表示する',
+    addedText: '',
     youtubeUrl: 'http://www.youtube.com/watch',
     trailerPair: '',
   },
@@ -180,6 +180,20 @@ export const detailMovie = new Vue({
         // テキスト文言とスタイルを変更
         this.$els.pushButton.textContent = this.addedText;
         this.$els.pushButton.classList.add('is-addPush', 'push-anime');
+        // 後でPromiseで書き換える -------------------------------
+        setTimeout(function() {
+          $('.p-push__button').removeClass('push-anime');
+          setTimeout(function() {
+            $('.p-push__button').addClass('validate');
+            setTimeout(function() {
+              $('.p-push__button').removeClass('validate');
+              setTimeout(function() {
+                $('.p-push__button').text('INBOXを表示する');
+              },200);
+            }, 1000);
+          }, 200);
+        }, 1200);
+        // 後でPromiseで書き換える -------------------------------
       }
     },
     jumpSearch: function() {
