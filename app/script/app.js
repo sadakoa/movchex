@@ -24,14 +24,6 @@
     * setEvent.js - イベントリスナーを初期化、格納する処理を行う
     * send.js - ユーザーの入力を受け取る処理を行う
   ---------------------------------------------------------
-  * Use Module & Libraly - 依存モジュール&ライブラリ
-    * jQuery - javascript ライブラリ (DOMスクレイピング的API)
-    * vue.js - Webインターフェイス向けリアクティブコンポーネント
-    * adaptiveBackground.js - 画像のドミナントカラーを取得するプラグイン(jQuery依存)
-    * url-dispatcher.js - URLディスパッチャー
-    * store.js - LocalStorageを操作するライブラリ
-    * themoviedb-javascript-library - The Movie DBのREST API
-  ---------------------------------------------------------
  */
 
 // 利用モジュール & パッケージ =====================================
