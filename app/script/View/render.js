@@ -190,7 +190,7 @@ export const detailMovie = new Vue({
               setTimeout(function() {
                 $('.p-push__button').text('INBOXを表示する');
               },200);
-            }, 1000);
+            }, 800);
           }, 200);
         }, 1200);
         // 後でPromiseで書き換える -------------------------------
